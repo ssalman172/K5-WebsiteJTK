@@ -1,0 +1,9 @@
+.bg-header {
+  background-color: #1a2c43;
+  height: 95px;
+  padding: 0 5%;
+}
+
+.header-title {
+  max-width: 296px;
+}

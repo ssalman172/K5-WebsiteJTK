@@ -1,0 +1,31 @@
+.banner {
+  background: url(/public/img/landing/banner.png);
+  height: 560px;
+}
+
+.prodi-container {
+  background-color: #1d3a5f;
+  height: 500px;
+}
+
+.prodi-card {
+  background-color: #181818;
+  width: 320px;
+  height: 320px;
+}
+
+.prodi-card-btn {
+  background: #c4c4c4;
+  border-radius: 2px;
+  transition: background 0.4s ease-in-out;
+}
+
+.prodi-card-btn:hover {
+  background: #ffffff;
+}
+
+.content-card {
+  background-color: #1d3a5f;
+  width: 30%;
+  height: 500px;
+}
