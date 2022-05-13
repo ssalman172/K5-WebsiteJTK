@@ -24,10 +24,10 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="ml5 mb2">
+      <div className="ml-auto mr-auto mb2 w-5/6">
         <p className="text-6xl font-bold mb2">Berita Terbaru</p>
-        <div className="flex">
-          <div className="content-card mr3">
+        <div className="flex justify-between">
+          <div className="content-card mr3 h-full">
             <img src="/img/landing/img-1.png" className="h-7/12 w-full" />
             <div className="m5 h-5/12">
               <p className="text-xl text-white mb2">
@@ -45,7 +45,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="content-card mr3">
+          <div className="content-card mr3 h-full">
             <img src="/img/landing/img-2.png" className="h-7/12 w-full" />
             <div className="m5 h-5/12">
               <p className="text-xl text-white mb2">
@@ -63,7 +63,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="content-card mr3">
+          <div className="content-card h-full">
             <img src="/img/landing/img-3.png" className="h-7/12 w-full" />
             <div className="m5 h-5/12">
               <p className="text-xl text-white mb2">
@@ -84,10 +84,10 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="ml5 mb2">
+      <div className="ml-auto mr-auto w-5/6 mb2">
         <p className="text-6xl font-bold mb2">Agenda</p>
-        <div className="flex">
-          <div className="content-card mr3">
+        <div className="flex justify-between">
+          <div className="content-card mr3 h-full">
             <img src="/img/landing/img-1.png" className="h-7/12 w-full" />
             <div className="m5 h-5/12">
               <p className="text-xl text-white mb2">
@@ -105,7 +105,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="content-card mr3">
+          <div className="content-card mr3 h-full">
             <img src="/img/landing/img-2.png" className="h-7/12 w-full" />
             <div className="m5 h-5/12">
               <p className="text-xl text-white mb2">
@@ -123,7 +123,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div className="content-card mr3">
+          <div className="content-card h-full">
             <img src="/img/landing/img-3.png" className="h-7/12 w-full" />
             <div className="m5 h-5/12">
               <p className="text-xl text-white mb2">

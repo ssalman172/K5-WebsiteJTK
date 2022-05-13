@@ -1,5 +1,7 @@
 .banner {
   background: url(/public/img/landing/banner.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   height: 560px;
 }
 
