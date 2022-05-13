@@ -6,10 +6,15 @@ const Header = () => {
     <div className="bg-header text-white flex items-center text-xl font-lora">
       <a href="#">
         <div className="flex items-center">
-          <img src="/img/icons/polban.png" style={{ width: 90, height: 90 }} />
-          <p className="header-title ml2">
-            JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA
-          </p>
+          <img src="/img/icons/polban.png" style={{ width: 50 }} />
+          <div className="whitespace-nowrap	ml4">
+            <p className="text-base">
+              POLITEKNIK NEGERI BANDUNG
+            </p>
+            <p className="text-base">
+              JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA
+            </p>
+          </div>
         </div>
       </a>
       <a href="#" className="hover:underline ml-auto mr2">

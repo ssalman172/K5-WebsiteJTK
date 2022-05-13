@@ -5,18 +5,18 @@ const LandingPage = () => {
   return (
     <div>
       <div className="banner text-5xl text-white flex items-end">
-        <p className="ml2 mb2">Informatics National Summit 2020</p>
+        <p className="ml2 mb2">Mahasiswa JTK Raih Prestasi dalam Program Nyatakan.id Kemenparekraf</p>
       </div>
       <div className="prodi-container flex justify-center items-center mb2">
         <div className="prodi-card flex flex-col items-center justify-center mr5">
-          <p className="text-white text-8xl mb-5">D-III</p>
+          <p className="text-white text-8xl mb-5">D3</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>
           <a href="#" className="text-sm prodi-card-btn py-2 px-5">
             Selengkapnya
           </a>
         </div>
         <div className="prodi-card flex flex-col items-center justify-center ml5">
-          <p className="text-white text-8xl mb-5">D-IV</p>
+          <p className="text-white text-8xl mb-5">D4</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>
           <a href="#" className="text-sm prodi-card-btn py-2 px-5">
             Selengkapnya

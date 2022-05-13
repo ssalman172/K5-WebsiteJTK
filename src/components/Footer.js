@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="w-1/3">
         <a href="#">
           <div className="w-full mr3 flex items-center mb-10">
-            <img src="/img/icons/polban.png" style={{ width: 100, height: 100 }} />
-            <h2 className="text-white header-title ml2 text-xl">
+            <img src="/img/icons/polban.png" style={{ width: 80 }} />
+            <h2 className="text-white header-title ml4 text-xl">
               JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA
             </h2>
           </div>
@@ -21,14 +21,14 @@ const Footer = () => {
 
       </div>
       <div className="w-1/5">
-        <p className="pb-3 mb-4 border-bottom header-title text-white">
+        <p className="pb-3 mb-4 border-bottom text-white">
           Program Studi
         </p>
         <p className="text-base mb-2">D3 Teknik Informatika</p>
         <p className="text-base mb-2">D4 Teknik Informatika</p>
       </div>
       <div className="w-1/5">
-        <p className="pb-3 mb-4 border-bottom header-title text-white">
+        <p className="pb-3 mb-4 border-bottom text-white">
           Tentang JTK
         </p>
         <p className="text-base mb-2">Profil</p>
@@ -37,7 +37,7 @@ const Footer = () => {
         <p className="text-base mb-2">Prestasi</p>
       </div>
       <div className="w-1/5">
-        <p className="pb-3 mb-4 border-bottom header-title text-white">
+        <p className="pb-3 mb-4 border-bottom text-white">
           Koneksi
         </p>
         <p className="text-base mb-2">Kontak</p>
