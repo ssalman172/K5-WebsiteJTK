@@ -1,3 +1,18 @@
+.color-orange {
+  color: #FF6600;
+}
+
+.color-gray {
+  color: #A5A5A5;
+}
+
+.pl5 {
+  padding-left: 5% !important;
+}
+.pr5 {
+  padding-right: 5% !important;
+}
+
 .m1 {
   margin: 1% !important;
 }

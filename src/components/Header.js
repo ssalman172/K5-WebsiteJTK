@@ -3,7 +3,7 @@ import "../styles/header.css";
 
 const Header = () => {
   return (
-    <div className="bg-header w-screen text-white flex items-center text-xl font-lora">
+    <div className="bg-header text-white flex items-center text-xl font-lora">
       <a href="#">
         <div className="flex items-center">
           <img src="/img/icons/polban.png" style={{ width: 90, height: 90 }} />

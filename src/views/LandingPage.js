@@ -4,10 +4,10 @@ import "../styles/landing.css";
 const LandingPage = () => {
   return (
     <div>
-      <div className="banner w-full text-5xl text-white flex items-end">
+      <div className="banner text-5xl text-white flex items-end">
         <p className="ml2 mb2">Informatics National Summit 2020</p>
       </div>
-      <div className="prodi-container w-full flex justify-center items-center mb2">
+      <div className="prodi-container flex justify-center items-center mb2">
         <div className="prodi-card flex flex-col items-center justify-center mr5">
           <p className="text-white text-8xl mb-5">D-III</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>

@@ -3,3 +3,7 @@
     height: 514px;
     padding: 0 5%;
   }
+
+.border-bottom {
+  border-bottom: 1px solid #FF6600;
+}
