@@ -1,0 +1,14 @@
+#profil-card {
+  height: 340px;
+}
+
+#profil-card-img {
+  top: -13%;
+}
+
+#edu-card {
+  background: linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/public/img/profil/edu-img.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

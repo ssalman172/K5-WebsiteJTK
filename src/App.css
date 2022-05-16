@@ -3,12 +3,20 @@
   padding: 0;
 }
 
+.bg-navyblue2 {
+  background-color: #213753;
+}
+
+.bg-navyblue {
+  background-color: #1a2c43;
+}
+
 .color-orange {
-  color: #FF6600;
+  color: #ff6600;
 }
 
 .color-gray {
-  color: #A5A5A5;
+  color: #a5a5a5;
 }
 
 .pl5 {
