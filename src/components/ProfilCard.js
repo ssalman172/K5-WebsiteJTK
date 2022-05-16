@@ -5,7 +5,7 @@ const ProfilCard = () => {
   return (
     <div
       id="profil-card"
-      className="w-full flex mt5 mb2 bg-navyblue text-white font-medium"
+      className="w-full flex mt5 mb2 bg-navyblue text-white font-medium font-lora"
     >
       {/* Profile Image */}
       <div className="ml2 mr2 relative w-1/5 h-4/5">
