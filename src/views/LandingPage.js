@@ -5,7 +5,9 @@ const LandingPage = () => {
   return (
     <div>
       <div className="banner text-5xl text-white flex items-end">
-        <p className="ml2 mb2">Mahasiswa JTK Raih Prestasi dalam Program Nyatakan.id Kemenparekraf</p>
+        <p className="ml2 mb2">
+          Mahasiswa JTK Raih Prestasi dalam Program Nyatakan.id Kemenparekraf
+        </p>
       </div>
       <div className="prodi-container flex justify-center items-center mb2">
         <div className="prodi-card flex flex-col items-center justify-center mr5">
@@ -24,7 +26,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="ml-auto mr-auto mb2 w-5/6">
+      <div className="mx-auto mb2 w-5/6">
         <p className="text-6xl font-bold mb2">Berita Terbaru</p>
         <div className="flex justify-between">
           <div className="content-card mr3 h-full">
@@ -84,7 +86,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="ml-auto mr-auto w-5/6 mb2">
+      <div className="mx-auto w-5/6 mb2">
         <p className="text-6xl font-bold mb2">Agenda</p>
         <div className="flex justify-between">
           <div className="content-card mr3 h-full">

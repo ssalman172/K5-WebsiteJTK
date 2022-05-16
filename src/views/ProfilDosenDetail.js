@@ -4,7 +4,7 @@ import ProfilDetailSidebar from "../components/ProfilDetailSidebar";
 
 const ProfilDosenDetail = () => {
   return (
-    <div className="w-11/12 ml-auto mr-auto mb3 mt3 flex">
+    <div className="w-11/12 mx-auto mb3 mt3 flex">
       <ProfilDetailSidebar />
       <ProfilDetailCard isDosen={true} />
     </div>
