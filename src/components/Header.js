@@ -20,7 +20,7 @@ const Header = () => {
           </div>
         </Link>
       </a>
-      <a href="#" className="hover:underline ml-auto mr2">
+      <a href="/jurusan" className="hover:underline ml-auto mr2">
         JTK
       </a>
       <a href="#" className="hover:underline mr2">

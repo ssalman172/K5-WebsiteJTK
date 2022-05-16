@@ -11,14 +11,14 @@ const LandingPage = () => {
         <div className="prodi-card flex flex-col items-center justify-center mr5">
           <p className="text-white text-8xl mb-5">D3</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>
-          <a href="#" className="text-sm prodi-card-btn py-2 px-5">
+          <a href="/d3" className="text-sm prodi-card-btn py-2 px-5">
             Selengkapnya
           </a>
         </div>
         <div className="prodi-card flex flex-col items-center justify-center ml5">
           <p className="text-white text-8xl mb-5">D4</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>
-          <a href="#" className="text-sm prodi-card-btn py-2 px-5">
+          <a href="/d4" className="text-sm prodi-card-btn py-2 px-5">
             Selengkapnya
           </a>
         </div>

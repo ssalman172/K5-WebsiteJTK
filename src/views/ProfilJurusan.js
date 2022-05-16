@@ -18,8 +18,8 @@ const ProfilJurusan = () => {
         <h1 className='font-bold text-5xl text-center'>Sambutan Ketua Jurusan</h1>
         <div className='flex items-center mt-10'>
           <div className='w-[25%]'>
-            <div className='rounded'>
-              <img src="/img/kajur.png" className='rounded-full' width={3500} />
+            <div>
+              <img src="/img/kajur.png" className='rounded-full object-cover w-full mr-auto ml-auto object-center'/>
             </div>
             <h1 className='font-bold text-xl text-center mt-4'>Bambang Wisnuadhi, S.Si., M.T.</h1>
           </div>
