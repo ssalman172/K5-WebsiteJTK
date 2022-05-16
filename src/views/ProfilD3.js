@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from '../components/Banner'
+import EmbedVideo from '../components/EmbedVideo'
 import VisiMisi from '../components/VisiMisi'
 
 const ProfilD3 = () => {
@@ -13,9 +14,7 @@ const ProfilD3 = () => {
         </div>
       </div>
       <div className='w-7/12 mr-auto ml-auto h-[540px] mt-10 mb-10'>
-        <iframe className='w-full h-full'
-          src="https://www.youtube.com/embed/sauzoenoYns">
-        </iframe>
+        <EmbedVideo url='https://www.youtube.com/embed/sauzoenoYns'/>
       </div>
       <VisiMisi
         visi="Menjadi Program Studi unggulan dan terdepan dalam program pendidikan diploma III Kerekayasaan
