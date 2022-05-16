@@ -1,21 +1,24 @@
 import "../App.css";
 import "../styles/header.css";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div className="bg-header text-white flex items-center text-xl font-lora">
       <a href="#">
-        <div className="flex items-center">
-          <img src="/img/icons/polban.png" style={{ width: 50 }} />
-          <div className="whitespace-nowrap	ml4">
-            <p className="text-base">
-              POLITEKNIK NEGERI BANDUNG
-            </p>
-            <p className="text-base">
-              JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA
-            </p>
+        <Link to='/'>
+          <div className="flex items-center">
+            <img src="/img/icons/polban.png" style={{ width: 50 }} />
+            <div className="whitespace-nowrap	ml4">
+              <p className="text-base">
+                POLITEKNIK NEGERI BANDUNG
+              </p>
+              <p className="text-base">
+                JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
       </a>
       <a href="#" className="hover:underline ml-auto mr2">
         JTK
