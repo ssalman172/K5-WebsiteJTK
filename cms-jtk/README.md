@@ -1,3 +1,3 @@
-# CMS JTK
+# Strapi application
 
-CMS for JTK website
+A quick description of your strapi application
