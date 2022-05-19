@@ -38,22 +38,22 @@ const Footer = () => {
           <a href="/jurusan" className="hover:underline text-base mb-2">
             Profil
           </a>
-          <a href="#" className="hover:underline text-base mb-2">
+          <a href="/staff" className="hover:underline text-base mb-2">
             Staff
           </a>
-          <a href="#" className="hover:underline text-base mb-2">
+          <a href="/kurikulum" className="hover:underline text-base mb-2">
             Kurikulum
           </a>
-          <a href="#" className="hover:underline text-base mb-2">
+          <a href="/prestasi" className="hover:underline text-base mb-2">
             Prestasi
           </a>
         </div>
         <div className="w-1/5 flex flex-col">
           <p className="pb-3 mb-4 border-bottom text-white">Koneksi</p>
-          <a href="#" className="hover:underline text-base mb-2">
+          <a href="/info-kontak" className="hover:underline text-base mb-2">
             Kontak
           </a>
-          <a href="#" className="hover:underline text-base mb-2">
+          <a href="/kerja-sama" className="hover:underline text-base mb-2">
             Kerja Sama
           </a>
         </div>

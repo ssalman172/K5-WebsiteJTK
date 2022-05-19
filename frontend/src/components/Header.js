@@ -1,18 +1,16 @@
 import "../App.css";
 import "../styles/header.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="bg-header text-white flex items-center text-xl font-lora">
       <a href="#">
-        <Link to='/'>
+        <Link to="/">
           <div className="flex items-center">
             <img src="/img/icons/polban.png" style={{ width: 50 }} />
             <div className="whitespace-nowrap	ml4">
-              <p className="text-base">
-                POLITEKNIK NEGERI BANDUNG
-              </p>
+              <p className="text-base">POLITEKNIK NEGERI BANDUNG</p>
               <p className="text-base">
                 JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA
               </p>
@@ -32,7 +30,7 @@ const Header = () => {
       <a href="#" className="hover:underline mr2">
         LAINNYA
       </a>
-      <a href="#" className="hover:underline mr2">
+      <a href="/info-kontak" className="hover:underline mr2">
         KONTAK
       </a>
       <a href="#" className="mr1">
