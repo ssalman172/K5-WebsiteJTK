@@ -1,7 +1,7 @@
 import "../App.css";
 import "../styles/profil-card.css";
 
-const ProfilCard = () => {
+const ProfilCard = (props) => {
   return (
     <div
       id="profil-card"
@@ -30,13 +30,17 @@ const ProfilCard = () => {
           <p>Pendidikan Tertinggi</p>
           <p>Status Ikatan Kerja</p>
           <p>Status Aktivitas</p>
-          <p>Expertise</p>
-          <p>KBK</p>
-          <p>Mata Kuliah yang Diampu</p>
-          <p>Pengalaman Proyek/Produk</p>
-          <p>Pengalaman Kegiatan/Penelitian</p>
-          <p>Prestasi</p>
-          <p>Daftar Publikasi Ilmiah</p>
+          {props.isDosen && (
+            <div>
+              <p>Expertise</p>
+              <p>KBK</p>
+              <p>Mata Kuliah yang Diampu</p>
+              <p>Pengalaman Proyek/Produk</p>
+              <p>Pengalaman Kegiatan/Penelitian</p>
+              <p>Prestasi</p>
+              <p>Daftar Publikasi Ilmiah</p>
+            </div>
+          )}
         </div>
         <div>
           <p>: Laki - laki</p>
@@ -44,13 +48,17 @@ const ProfilCard = () => {
           <p>: S3</p>
           <p>: Dosen Tetap</p>
           <p>: Aktif</p>
-          <p>: -</p>
-          <p>: -</p>
-          <p>: Cloud Computing</p>
-          <p>: Travel OK</p>
-          <p>: -</p>
-          <p>: -</p>
-          <p>: -</p>
+          {props.isDosen && (
+            <div>
+              <p>: -</p>
+              <p>: -</p>
+              <p>: Cloud Computing</p>
+              <p>: Travel OK</p>
+              <p>: -</p>
+              <p>: -</p>
+              <p>: -</p>
+            </div>
+          )}
         </div>
       </div>
       {/* Pendidikan Terakhir */}
