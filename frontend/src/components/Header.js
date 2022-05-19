@@ -8,13 +8,13 @@ const Header = () => {
         <Link to="/artikel-news" className="px-3 hover:underline">
           Berita
         </Link>
-        <Link to="/artikel-news" className="px-3 hover:underline">
+        <Link to="#" className="px-3 hover:underline">
           Akademik
         </Link>
-        <Link to="/artikel-news" className="px-3 hover:underline">
+        <Link to="#" className="px-3 hover:underline">
           E-Learning
         </Link>
-        <Link to="/artikel-news" className="px-3 hover:underline">
+        <Link to="#" className="px-3 hover:underline">
           Peta Website
         </Link>
         <div className="flex px-3">
@@ -50,7 +50,7 @@ const Header = () => {
         </Link>
         <div className="flex items-center font-bold text-lg text-center">
           <Link
-            to="#"
+            to="/"
             className="bg-[#FF7F00] text-black border border-[#1A2C43] px-6 py-3 flex-auto"
           >
             Beranda
@@ -74,13 +74,13 @@ const Header = () => {
             </span>
           </button>
           <Link
-            to="#"
+            to="/tracer-study"
             className="bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]"
           >
             Tracer Study
           </Link>
           <Link
-            to="#"
+            to="/info-kontak"
             className="bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]"
           >
             Kontak
