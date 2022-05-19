@@ -14,7 +14,7 @@ const ProfilD4 = () => {
     <div>
       <Banner img='/img/landing/banner.png' />
       <div className="prodi-container flex justify-center items-center">
-        <div className="prodi-card flex flex-col items-center justify-center mr5">
+        <div className="prodi-card flex flex-col items-center justify-center">
           <p className="text-white text-8xl mb-5">D4</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>
         </div>
