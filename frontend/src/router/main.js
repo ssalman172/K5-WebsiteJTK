@@ -14,6 +14,7 @@ import ArtikelNewsDetail from "../views/ArtikelNewsDetail";
 import InfoKontak from "../views/InfoKontak";
 import Agenda from "../views/Agenda";
 import Prestasi from "../views/Prestasi";
+import DaftarPrestasi from "../views/KerjaSama";
 
 const Main = () => {
   return (
@@ -29,6 +30,7 @@ const Main = () => {
       <Route path="/artikel-news-detail" element={<ArtikelNewsDetail />} />
       <Route path="/info-kontak" element={<InfoKontak />} />
       <Route path="/agenda" element={<Agenda />} />
+      <Route path="/kerja-sama/:sub_url" element={<DaftarPrestasi />} />
       <Route path="/jurusan" element={<ProfilJurusan />} />
       <Route path="/d3" element={<ProfilD3 />} />
       <Route path="/d4" element={<ProfilD4 />} />
