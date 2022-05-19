@@ -1,53 +1,38 @@
 import "../App.css";
 
 const BasicInfo = (props) => {
-  if (props.isDosen) {
-    return (
-      <div className="flex rounded bg-navyblue text-white mb3 p3">
-        <img id="basic-info-img" src="/img/profil/person.png" />
-        <div className="ml3">
-          <p className="font-bold text-3xl mb-10">
-            Prof. Shalahuddin Sanusi M.Eng, Ph.D
-          </p>
-          <div className="grid grid-cols-2 gap-7 text-lg">
-            <div className="font-normal">
-              <p className="mb-2">Program Studi</p>
-              <p className="mb-2">Mata Kuliah yang Diampu</p>
-              <p className="mb-2">Status</p>
-              <p className="mb-2">Jabatan Fungsional</p>
-            </div>
-            <div className="font-bold">
-              <p className="mb-2">D4 Teknik Informatika</p>
-              <p className="mb-2">Cloud Computing</p>
-              <p className="mb-2">Aktif</p>
-              <p className="mb-2">Profesor</p>
-            </div>
+  return (
+    <div className="flex rounded bg-navyblue text-white mb3 p3">
+      <img id="basic-info-img" src="/img/profil/person.png" />
+      <div className="ml3">
+        <p className="font-bold text-3xl mb-10">
+          Prof. Shalahuddin Sanusi M.Eng, Ph.D
+        </p>
+        <div className="grid grid-cols-2 gap-7 text-lg">
+          <div className="font-normal">
+            {props.isDosen && (
+              <div>
+                <p className="mb-2">Program Studi</p>
+                <p className="mb-2">Mata Kuliah yang Diampu</p>
+              </div>
+            )}
+            <p className="mb-2">Status</p>
+            <p className="mb-2">Jabatan Fungsional</p>
+          </div>
+          <div className="font-bold">
+            {props.isDosen && (
+              <div>
+                <p className="mb-2">D4 Teknik Informatika</p>
+                <p className="mb-2">Cloud Computing</p>
+              </div>
+            )}
+            <p className="mb-2">Aktif</p>
+            <p className="mb-2">Profesor</p>
           </div>
         </div>
       </div>
-    );
-  } else {
-    return (
-      <div className="flex rounded bg-navyblue text-white mb3 p3">
-        <img id="basic-info-img" src="/img/profil/person.png" />
-        <div className="ml3">
-          <p className="font-bold text-3xl mb-10">
-            Prof. Shalahuddin Sanusi M.Eng, Ph.D
-          </p>
-          <div className="grid grid-cols-2 gap-7 text-lg">
-            <div className="font-normal">
-              <p className="mb-2">Status</p>
-              <p className="mb-2">Jabatan Fungsional</p>
-            </div>
-            <div className="font-bold">
-              <p className="mb-2">Aktif</p>
-              <p className="mb-2">Profesor</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+    </div>
+  );
 };
 
 const ProjectInfo = (props) => {
