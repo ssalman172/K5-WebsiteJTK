@@ -1,89 +1,110 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
-import Banner from '../components/Banner'
-import ReactPaginate from 'react-paginate';
-import Pagination from '../components/Pagination';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import Banner from "../components/Banner";
+import ReactPaginate from "react-paginate";
+import Pagination from "../components/Pagination";
 
 const images = [
-  '/img/kerja-sama/MIT_logo.png',
-  '/img/kerja-sama/gojek_logo.png',
-  '/img/kerja-sama/google_logo.png',
-  '/img/kerja-sama/google_logo.png',
-  '/img/kerja-sama/gojek_logo.png',
-  '/img/kerja-sama/MIT_logo.png',
-  '/img/kerja-sama/gojek_logo.png',
-  '/img/kerja-sama/google_logo.png',
-  '/img/kerja-sama/MIT_logo.png',
-  '/img/kerja-sama/gojek_logo.png',
-  '/img/kerja-sama/google_logo.png',
-  '/img/kerja-sama/MIT_logo.png',
-  '/img/kerja-sama/gojek_logo.png',
-  '/img/kerja-sama/google_logo.png',
-  '/img/kerja-sama/MIT_logo.png',
-  '/img/kerja-sama/gojek_logo.png',
-  '/img/kerja-sama/google_logo.png',
-
+  "/img/kerja-sama/MIT_logo.png",
+  "/img/kerja-sama/gojek_logo.png",
+  "/img/kerja-sama/google_logo.png",
+  "/img/kerja-sama/google_logo.png",
+  "/img/kerja-sama/gojek_logo.png",
+  "/img/kerja-sama/MIT_logo.png",
+  "/img/kerja-sama/gojek_logo.png",
+  "/img/kerja-sama/google_logo.png",
+  "/img/kerja-sama/MIT_logo.png",
+  "/img/kerja-sama/gojek_logo.png",
+  "/img/kerja-sama/google_logo.png",
+  "/img/kerja-sama/MIT_logo.png",
+  "/img/kerja-sama/gojek_logo.png",
+  "/img/kerja-sama/google_logo.png",
+  "/img/kerja-sama/MIT_logo.png",
+  "/img/kerja-sama/gojek_logo.png",
+  "/img/kerja-sama/google_logo.png",
 ];
 
 const DaftarPrestasi = () => {
   const [currentItems, setCurrentItems] = useState([]);
-  const selectionActiveClass = 'color-navyblue underline font-bold hover:cursor-pointer';
-  const selectionNotActiveClass = 'color-navyblue font-normal opacity-50 hover:underline hover:opacity-100 hover:cursor-pointer';
+  const selectionActiveClass = "color-navyblue underline font-bold";
+  const selectionNotActiveClass =
+    "color-navyblue font-normal opacity-50 hover:underline hover:opacity-100 hover:cursor-pointer";
   const sub_url = useParams().sub_url;
 
   return (
     <div>
-      <Banner title='Info Kerja Sama' img='/img/kerja-sama/banner.png' />
-      <div className='w-7/12 mr-auto ml-auto font-lora'>
-        <div className='flex flex-col items-center mb3 mt3'>
+      <Banner title="Info Kerja Sama" img="/img/kerja-sama/banner.png" />
+      <div className="w-7/12 mr-auto ml-auto font-lora">
+        <div className="flex flex-col items-center mb3 mt3">
           <div className="flex text-4xl w-full justify-around">
-            <Link to='/kerja-sama/internasional'>
+            <Link to="/kerja-sama/internasional">
               <span
-                className={sub_url === 'internasional' ? selectionActiveClass : selectionNotActiveClass}
+                className={
+                  sub_url === "internasional"
+                    ? selectionActiveClass
+                    : selectionNotActiveClass
+                }
               >
                 Internasional
               </span>
             </Link>
-            <Link to='/kerja-sama/nasional'>
+            <Link to="/kerja-sama/nasional">
               <span
-                className={sub_url === 'nasional' ? selectionActiveClass : selectionNotActiveClass}
+                className={
+                  sub_url === "nasional"
+                    ? selectionActiveClass
+                    : selectionNotActiveClass
+                }
               >
                 Nasional
               </span>
             </Link>
-            <Link to='/kerja-sama/pengajuan'>
+            <Link to="/kerja-sama/pengajuan">
               <span
-                className={sub_url === 'pengajuan' ? selectionActiveClass : selectionNotActiveClass}
+                className={
+                  sub_url === "pengajuan"
+                    ? selectionActiveClass
+                    : selectionNotActiveClass
+                }
               >
                 Ajukan Kerjasama
               </span>
             </Link>
           </div>
-          {(sub_url === 'internasional' || sub_url === 'nasional') &&
-            <div className='grid grid-cols-3 gap-4 w-full mt-5'>
+          {(sub_url === "internasional" || sub_url === "nasional") && (
+            <div className="grid grid-cols-3 gap-4 w-full mt-5">
               {currentItems.map((item) => {
                 return (
-                  <img src={item} width={320} height={320} className='self-center justify-self-center' />
-                )
+                  <img
+                    src={item}
+                    width={320}
+                    height={320}
+                    className="self-center justify-self-center"
+                  />
+                );
               })}
-            </div>}
+            </div>
+          )}
         </div>
-        {sub_url !== 'pengajuan' &&
-        <div className='mb-5'>
-          <Pagination
-            itemsPerPage={9}
-            wholeDataGetter={images}
-            currentDataSetter={setCurrentItems}
-          />
-        </div>}
+        {sub_url !== "pengajuan" && (
+          <div className="mb-5">
+            <Pagination
+              itemsPerPage={9}
+              wholeDataGetter={images}
+              currentDataSetter={setCurrentItems}
+            />
+          </div>
+        )}
       </div>
-      {(sub_url === 'pengajuan') &&
+      {sub_url === "pengajuan" && (
         <div className="flex relative font-lora m2">
           <div className="w-1/5"></div>
           <div className="flex w-4/5 min-h-[500px] bg-[#1A2C43] pt-9">
             <div className="w-1/5"></div>
             <div className="w-4/5">
-              <h2 className="text-white text-4xl mb-8 font-bold">Formulir Pengajuan Kerjasama</h2>
+              <h2 className="text-white text-4xl mb-8 font-bold">
+                Formulir Pengajuan Kerjasama
+              </h2>
               <form className="pr-[3%] w-full text-white text-base font-semibold">
                 <input
                   type="text"
@@ -100,7 +121,7 @@ const DaftarPrestasi = () => {
                     type="tel"
                     placeholder="Nomor Telepon PIC"
                     className="bg-[#1A2C43] pb-3 outline-none border-b border-[#FFFFFF] w-1/2"
-                    pattern='\+?([ -]?\d+)+|\(\d+\)([ -]\d+)'
+                    pattern="\+?([ -]?\d+)+|\(\d+\)([ -]\d+)"
                   />
                 </div>
                 <div className="flex mb-7">
@@ -115,7 +136,7 @@ const DaftarPrestasi = () => {
                     className="bg-[#1A2C43] pb-3 outline-none border-b border-[#FFFFFF] w-1/2"
                   />
                 </div>
-                <p className='bg-[#1A2C43] pb-3 text-[#9ba3af] font-normal'>
+                <p className="bg-[#1A2C43] pb-3 text-[#9ba3af] font-normal">
                   Drop file atau Jelajahi (PDF)
                 </p>
                 <input
@@ -166,9 +187,9 @@ const DaftarPrestasi = () => {
             </div>
           </div>
         </div>
-      }
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default DaftarPrestasi
+export default DaftarPrestasi;

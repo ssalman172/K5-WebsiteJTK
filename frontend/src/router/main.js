@@ -34,7 +34,7 @@ const Main = () => {
       <Route path="/jurusan" element={<ProfilJurusan />} />
       <Route path="/d3" element={<ProfilD3 />} />
       <Route path="/d4" element={<ProfilD4 />} />
-      <Route path="/prestasi/mahasiswa" element={<Prestasi />} />
+      <Route path="/prestasi/:sub_url" element={<Prestasi />} />
     </Routes>
   );
 };

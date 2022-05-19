@@ -11,11 +11,9 @@ const Sarana = () => {
       />
       <div className="w-2/3 mx-auto">
         <div className="flex text-4xl mb3 mt3">
-          <a href="#" className="color-navyblue underline font-bold mr3">
-            Sarana
-          </a>
+          <p className="color-navyblue underline font-bold mr3">Sarana</p>
           <a
-            href="#"
+            href="/prasarana"
             className="color-navyblue font-normal opacity-50 hover:underline hover:opacity-100"
           >
             Prasarana
