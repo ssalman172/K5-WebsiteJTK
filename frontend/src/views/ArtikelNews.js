@@ -9,24 +9,18 @@ const ArtikelNews = () => {
       <Banner title="Artikel" img="img/artikel-news/artikel-banner.png" />
       <div className="w-11/12 flex justify-between mx-auto">
         <div className="w-4/5 mr2">
-          <div className="flex text-4xl mb3 mt3">
-            <a
-              href="#"
-              className="color-navyblue font-normal opacity-50 hover:underline hover:opacity-100 mr3"
-            >
-              Sarana
-            </a>
-            <a href="#" className="color-navyblue underline font-bold">
-              Prasarana
-            </a>
-          </div>
+          <h1 className="font-lora font-bold color-navyblue text-[40px] my-[2%]">
+            Berita JTK
+          </h1>
           <ContentList isArtikel={true} />
           <ContentList isArtikel={true} />
           <ContentList isArtikel={true} />
           <ContentList isArtikel={true} />
           <ContentList isArtikel={true} />
         </div>
-        <RilisBerita />
+        <div className="mt3">
+          <RilisBerita />
+        </div>
       </div>
     </div>
   );

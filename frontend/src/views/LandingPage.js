@@ -40,7 +40,7 @@ const LandingPage = () => {
               <div className="flex justify-end items-end mt-14">
                 <a
                   className="text-end text-sm mt-auto hover:underline text-white"
-                  href="#"
+                  href="/artikel-news"
                 >
                   Read More
                 </a>
@@ -58,7 +58,7 @@ const LandingPage = () => {
               <div className="flex justify-end items-end mt-14">
                 <a
                   className="text-end text-sm mt-auto hover:underline text-white"
-                  href="#"
+                  href="/artikel-news"
                 >
                   Read More
                 </a>
@@ -76,7 +76,7 @@ const LandingPage = () => {
               <div className="flex justify-end items-end mt-14">
                 <a
                   className="text-end text-sm mt-auto hover:underline text-white"
-                  href="#"
+                  href="/artikel-news"
                 >
                   Read More
                 </a>
@@ -100,7 +100,7 @@ const LandingPage = () => {
               <div className="flex justify-end items-end mt-14">
                 <a
                   className="text-end text-sm mt-auto hover:underline text-white"
-                  href="#"
+                  href="/agenda"
                 >
                   Read More
                 </a>
@@ -118,7 +118,7 @@ const LandingPage = () => {
               <div className="flex justify-end items-end mt-14">
                 <a
                   className="text-end text-sm mt-auto hover:underline text-white"
-                  href="#"
+                  href="/agenda"
                 >
                   Read More
                 </a>
@@ -136,7 +136,7 @@ const LandingPage = () => {
               <div className="flex justify-end items-end mt-14">
                 <a
                   className="text-end text-sm mt-auto hover:underline text-white"
-                  href="#"
+                  href="/agenda"
                 >
                   Read More
                 </a>

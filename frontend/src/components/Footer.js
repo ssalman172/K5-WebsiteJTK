@@ -38,13 +38,19 @@ const Footer = () => {
           <a href="/jurusan" className="hover:underline text-base mb-2">
             Profil
           </a>
+          <a href="/dosen" className="hover:underline text-base mb-2">
+            Dosen
+          </a>
           <a href="/staff" className="hover:underline text-base mb-2">
             Staff
           </a>
           <a href="/kurikulum" className="hover:underline text-base mb-2">
             Kurikulum
           </a>
-          <a href="/prestasi" className="hover:underline text-base mb-2">
+          <a
+            href="/prestasi/mahasiswa"
+            className="hover:underline text-base mb-2"
+          >
             Prestasi
           </a>
         </div>

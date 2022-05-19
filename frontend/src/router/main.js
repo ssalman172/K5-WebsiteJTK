@@ -10,6 +10,7 @@ import ProfilStaffDetail from "../views/ProfilStaffDetail";
 import Sarana from "../views/Sarana";
 import Prasarana from "../views/Prasarana";
 import ArtikelNews from "../views/ArtikelNews";
+import ArtikelNewsDetail from "../views/ArtikelNewsDetail";
 import InfoKontak from "../views/InfoKontak";
 import Agenda from "../views/Agenda";
 import Prestasi from "../views/Prestasi";
@@ -25,6 +26,7 @@ const Main = () => {
       <Route path="/sarana" element={<Sarana />} />
       <Route path="/prasarana" element={<Prasarana />} />
       <Route path="/artikel-news" element={<ArtikelNews />} />
+      <Route path="/artikel-news-detail" element={<ArtikelNewsDetail />} />
       <Route path="/info-kontak" element={<InfoKontak />} />
       <Route path="/agenda" element={<Agenda />} />
       <Route path="/jurusan" element={<ProfilJurusan />} />
