@@ -72,15 +72,15 @@ const Footer = () => {
           Jurusan Teknik Komputer dan Informatika. 2022. All Rights reserved.
         </p>
         <div className="color-orange text-2xl">
-          <span className="mr-2">
+          <a href="#" className="mr-2">
             <ion-icon name="logo-instagram"></ion-icon>
-          </span>
-          <span className="mr-2">
+          </a>
+          <a href="#" className="mr-2">
             <ion-icon name="logo-facebook"></ion-icon>
-          </span>
-          <span>
+          </a>
+          <a href="#">
             <ion-icon name="logo-linkedin"></ion-icon>
-          </span>
+          </a>
         </div>
       </div>
     </div>
