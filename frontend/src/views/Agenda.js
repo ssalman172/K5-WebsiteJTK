@@ -4,9 +4,33 @@ import Calendar from "react-calendar";
 
 const Agenda = () => {
   const [value, setValue] = useState(new Date());
+  const dayName = [
+    "Minggu",
+    "Senin",
+    "Selasa",
+    "Rabu",
+    "Kamis",
+    "Jumat",
+    "Sabtu",
+  ];
+  const monthName = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
 
   const onChange = (nextValue) => {
     setValue(nextValue);
+    console.log(value.getFullYear());
   };
 
   return (
@@ -24,9 +48,13 @@ const Agenda = () => {
           <img src="/img/icons/agenda/right-arrow.png" className="w-8 h-8" />
         </div>
         <div className="flex flex-col items-end">
-          <p className="text-white text-9xl font-bold mb3">18</p>
-          <p className="text-8xl font-semibold mb3">Sabtu</p>
-          <p className="text-5xl font-semibold mb3">Juni 2022</p>
+          <p className="text-white text-9xl font-bold mb3">{value.getDate()}</p>
+          <p className="text-8xl font-semibold mb3">
+            {dayName[value.getDay()]}
+          </p>
+          <p className="text-5xl font-semibold mb3">
+            {monthName[value.getMonth()]} {value.getFullYear()}
+          </p>
           <div className="flex flex-col items-end overflow-y-auto h-[20vh]">
             <a href="#" className="text-white text-2xl hover:underline">
               Pertemuan Wali Murid 08.00 - 14.00
