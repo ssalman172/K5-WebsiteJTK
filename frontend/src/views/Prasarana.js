@@ -1,11 +1,11 @@
 import "../App.css";
-import BannerCard from "../components/BannerCard";
+import Banner from "../components/BannerCard";
 import ContentList from "../components/ContentList";
 
 const Prasarana = () => {
   return (
     <div>
-      <BannerCard
+      <Banner
         title="Sarana Prasarana"
         img="img/sarana-prasarana/sarana-banner.png"
       />

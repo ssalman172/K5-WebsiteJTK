@@ -12,6 +12,7 @@ import Prasarana from "../views/Prasarana";
 import ArtikelNews from "../views/ArtikelNews";
 import InfoKontak from "../views/InfoKontak";
 import Agenda from "../views/Agenda";
+import Prestasi from "../views/Prestasi";
 
 const Main = () => {
   return (
@@ -29,6 +30,7 @@ const Main = () => {
       <Route path="/jurusan" element={<ProfilJurusan />} />
       <Route path="/d3" element={<ProfilD3 />} />
       <Route path="/d4" element={<ProfilD4 />} />
+      <Route path="/prestasi/mahasiswa" element={<Prestasi />} />
     </Routes>
   );
 };

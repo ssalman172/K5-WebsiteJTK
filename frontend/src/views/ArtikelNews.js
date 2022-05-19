@@ -1,12 +1,12 @@
 import "../App.css";
-import BannerCard from "../components/BannerCard";
+import Banner from "../components/BannerCard";
 import ContentList from "../components/ContentList";
 import RilisBerita from "../components/RilisBerita";
 
 const ArtikelNews = () => {
   return (
     <div>
-      <BannerCard title="Artikel" img="img/artikel-news/artikel-banner.png" />
+      <Banner title="Artikel" img="img/artikel-news/artikel-banner.png" />
       <div className="w-11/12 flex justify-between mx-auto">
         <div className="w-4/5 mr2">
           <div className="flex text-4xl mb3 mt3">
