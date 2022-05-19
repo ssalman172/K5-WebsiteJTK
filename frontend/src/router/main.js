@@ -11,6 +11,7 @@ import Sarana from "../views/Sarana";
 import Prasarana from "../views/Prasarana";
 import ArtikelNews from "../views/ArtikelNews";
 import InfoKontak from "../views/InfoKontak";
+import Agenda from "../views/Agenda";
 
 const Main = () => {
   return (
@@ -24,10 +25,10 @@ const Main = () => {
       <Route path="/prasarana" element={<Prasarana />} />
       <Route path="/artikel-news" element={<ArtikelNews />} />
       <Route path="/info-kontak" element={<InfoKontak />} />
+      <Route path="/agenda" element={<Agenda />} />
       <Route path="/jurusan" element={<ProfilJurusan />} />
       <Route path="/d3" element={<ProfilD3 />} />
       <Route path="/d4" element={<ProfilD4 />} />
-
     </Routes>
   );
 };
