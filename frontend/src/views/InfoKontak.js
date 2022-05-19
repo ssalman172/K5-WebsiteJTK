@@ -39,7 +39,7 @@ const InfoKontak = () => {
           </form>
         </div>
       </div>
-      <div className="absolute top-[5%] w-[444px] h-[444px] bg-[#D65D0E] p-6 pl-8">
+      <div className="absolute top-[5%] w-1/3 h-[444px] bg-[#D65D0E] p-6 pl-8">
         <h2 className="text-4xl font-bold mb-[7%]">Hubungi Kami</h2>
         <div className="flex text-base font-semibold text-white items-center mb5">
           <img
