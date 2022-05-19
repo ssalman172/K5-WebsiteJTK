@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import Banner from "../components/Banner";
-import ReactPaginate from "react-paginate";
-import Pagination from "../components/Pagination";
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom';
+import Banner from '../components/Banner'
+import Pagination from '../components/Pagination';
 
 const images = [
   "/img/kerja-sama/MIT_logo.png",

@@ -20,11 +20,11 @@ const Pagination = ({itemsPerPage, wholeDataGetter, currentDataSetter}) => {
     <>
       <ReactPaginate
             breakLabel="..."
-            nextLabel=">"
+            nextLabel="→"
             onPageChange={handlePageClick}
             pageRangeDisplayed={5}
             pageCount={pageCount}
-            previousLabel="<"
+            previousLabel="←"
             renderOnZeroPageCount={null}
             containerClassName='flex w-full justify-center font-lato'
             pageLinkClassName='pl-4 pr-4'

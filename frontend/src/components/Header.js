@@ -1,5 +1,6 @@
 import "../App.css";
 import { Link } from "react-router-dom";
+import HeaderDropdown from "./HeaderDropdown";
 
 const Header = () => {
   return (
@@ -48,31 +49,48 @@ const Header = () => {
             </div>
           </div>
         </Link>
-        <div className="flex items-center font-bold text-lg text-center">
+        <div className="flex items-center font-bold text-lg text-center font-normal">
           <Link
             to="/"
             className="bg-[#FF7F00] text-black border border-[#1A2C43] px-6 py-3 flex-auto"
           >
             Beranda
           </Link>
-          <button className="flex justify-center bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]">
-            <p>Tentang JTK</p>
-            <span className="pl-1 hover:cursor-pointer">
-              <ion-icon name="caret-down-outline"></ion-icon>
-            </span>
-          </button>
-          <button className="flex justify-center bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]">
-            <p>Layanan & Fasilitas</p>
-            <span className="pl-1 hover:cursor-pointer">
-              <ion-icon name="caret-down-outline"></ion-icon>
-            </span>
-          </button>
-          <button className="flex justify-center bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]">
-            <p>Kemahasiswaan</p>
-            <span className="pl-1 hover:cursor-pointer">
-              <ion-icon name="caret-down-outline"></ion-icon>
-            </span>
-          </button>
+          <HeaderDropdown 
+            title='Tentang JTK'
+            dropdownList={[
+              {
+                title: 'Profil Jurusan',
+                url: '/jurusan'
+              },
+              {
+                title: 'D3 Teknik Informatika',
+                url: '/d3'
+              },
+              {
+                title: 'D4 Teknik Informatika',
+                url: '/d4'
+              },
+            ]}
+          />
+          <HeaderDropdown 
+            title='Layanan &amp; Fasilitas'
+            dropdownList={[
+              {
+                title: 'Jurusan',
+                url: '/jurusan'
+              }
+            ]}
+          />
+          <HeaderDropdown 
+            title='Kemahasiswaan'
+            dropdownList={[
+              {
+                title: 'Jurusan',
+                url: '/jurusan'
+              }
+            ]}
+          />
           <Link
             to="/tracer-study"
             className="bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]"
@@ -85,12 +103,15 @@ const Header = () => {
           >
             Kontak
           </Link>
-          <button className="flex justify-center bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]">
-            <p>Lainnya</p>
-            <span className="pl-1 hover:cursor-pointer">
-              <ion-icon name="caret-down-outline"></ion-icon>
-            </span>
-          </button>
+          <HeaderDropdown 
+            title='Lainnya'
+            dropdownList={[
+              {
+                title: 'Jurusan',
+                url: '/jurusan'
+              }
+            ]}
+          />
         </div>
       </div>
     </div>
