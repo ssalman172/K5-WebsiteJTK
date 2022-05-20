@@ -29,7 +29,7 @@ const Header = () => {
           <input
             type="text"
             placeholder="Pencarian"
-            className="text-black w-[120px] h-[20px] px-2 rounded-l-sm"
+            className="text-black w-[120px] h-[20px] px-2 rounded-l-sm outline-none"
           />
           <button
             type="submit"
@@ -40,15 +40,13 @@ const Header = () => {
         </div>
       </div>
       <div className="flex flex-col justify-between h-[170px] bg-[#1A2C43] px-[6%]">
-        <Link to="/">
-          <div className="flex items-center text-2xl font-medium py-3">
-            <img src="/img/icons/polban.png" className="w-[79px] h-[92px]" />
-            <div className="ml-5">
-              <p>POLITEKNIK NEGERI BANDUNG</p>
-              <p>JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA</p>
-            </div>
+        <div className="flex items-center text-2xl font-medium py-3">
+          <img src="/img/icons/polban.png" className="w-[79px] h-[92px]" />
+          <div className="ml-5">
+            <p>POLITEKNIK NEGERI BANDUNG</p>
+            <p>JURUSAN TEKNIK KOMPUTER DAN INFORMATIKA</p>
           </div>
-        </Link>
+        </div>
         <div className="flex items-center font-bold text-lg text-center font-normal">
           <Link
             to="/"
@@ -56,39 +54,39 @@ const Header = () => {
           >
             Beranda
           </Link>
-          <HeaderDropdown 
-            title='Tentang JTK'
+          <HeaderDropdown
+            title="Tentang JTK"
             dropdownList={[
               {
-                title: 'Profil Jurusan',
-                url: '/jurusan'
+                title: "Profil Jurusan",
+                url: "/jurusan",
               },
               {
-                title: 'D3 Teknik Informatika',
-                url: '/d3'
+                title: "D3 Teknik Informatika",
+                url: "/d3",
               },
               {
-                title: 'D4 Teknik Informatika',
-                url: '/d4'
+                title: "D4 Teknik Informatika",
+                url: "/d4",
               },
             ]}
           />
-          <HeaderDropdown 
-            title='Layanan &amp; Fasilitas'
+          <HeaderDropdown
+            title="Layanan &amp; Fasilitas"
             dropdownList={[
               {
-                title: 'Jurusan',
-                url: '/jurusan'
-              }
+                title: "Jurusan",
+                url: "/jurusan",
+              },
             ]}
           />
-          <HeaderDropdown 
-            title='Kemahasiswaan'
+          <HeaderDropdown
+            title="Kemahasiswaan"
             dropdownList={[
               {
-                title: 'Jurusan',
-                url: '/jurusan'
-              }
+                title: "Jurusan",
+                url: "/jurusan",
+              },
             ]}
           />
           <Link
@@ -103,13 +101,13 @@ const Header = () => {
           >
             Kontak
           </Link>
-          <HeaderDropdown 
-            title='Lainnya'
+          <HeaderDropdown
+            title="Lainnya"
             dropdownList={[
               {
-                title: 'Jurusan',
-                url: '/jurusan'
-              }
+                title: "Jurusan",
+                url: "/jurusan",
+              },
             ]}
           />
         </div>
