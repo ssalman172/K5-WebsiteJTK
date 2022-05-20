@@ -75,8 +75,12 @@ const Header = () => {
             title="Layanan &amp; Fasilitas"
             dropdownList={[
               {
-                title: "Jurusan",
-                url: "/jurusan",
+                title: "Sarana",
+                url: "/sarana",
+              },
+              {
+                title: "Prasarana",
+                url: "/prasarana",
               },
             ]}
           />
@@ -84,8 +88,8 @@ const Header = () => {
             title="Kemahasiswaan"
             dropdownList={[
               {
-                title: "Jurusan",
-                url: "/jurusan",
+                title: "Daftar Prestasi",
+                url: "/prestasi",
               },
             ]}
           />
@@ -105,8 +109,16 @@ const Header = () => {
             title="Lainnya"
             dropdownList={[
               {
-                title: "Jurusan",
-                url: "/jurusan",
+                title: "Artikel & News",
+                url: "/artikel-news",
+              },
+              {
+                title: "Agenda",
+                url: "/agenda",
+              },
+              {
+                title: "Kerja Sama",
+                url: "/kerja-sama/internasional",
               },
             ]}
           />

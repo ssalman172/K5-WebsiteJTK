@@ -59,7 +59,10 @@ const Footer = () => {
           <a href="/info-kontak" className="hover:underline text-base mb-2">
             Kontak
           </a>
-          <a href="/kerja-sama" className="hover:underline text-base mb-2">
+          <a
+            href="/kerja-sama/internasional"
+            className="hover:underline text-base mb-2"
+          >
             Kerja Sama
           </a>
         </div>
