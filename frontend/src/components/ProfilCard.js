@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 import "../styles/profil-card.css";
 
@@ -17,7 +18,9 @@ const ProfilCard = (props) => {
             <img src="/img/profil/person.png" className="w-full h-full" />
           </div>
           <div className="flex flex-col justify-around">
-            <p className="my-2 text-xl">Prof. Sanusi M.Eng, Ph.D</p>
+            <Link to='/dosen-detail'>
+              <p className="my-2 text-xl hover:underline">Bambang Wisnuadhi, S.Si., M.T.</p>
+            </Link>
             <p className="my-2 text-base">Bandung, Indonesia</p>
           </div>
         </div>
@@ -44,16 +47,16 @@ const ProfilCard = (props) => {
         </div>
         <div>
           <p>: Laki - laki</p>
-          <p>: Profesor</p>
-          <p>: S3</p>
+          <p>: Lektor</p>
+          <p>: S2</p>
           <p>: Dosen Tetap</p>
           <p>: Aktif</p>
           {props.isDosen && (
             <div>
               <p>: -</p>
               <p>: -</p>
-              <p>: Cloud Computing</p>
-              <p>: Travel OK</p>
+              <p>: Analisis dan Perancangan Perangkat Lunak 2</p>
+              <p>: -</p>
               <p>: -</p>
               <p>: -</p>
               <p>: -</p>
@@ -68,7 +71,7 @@ const ProfilCard = (props) => {
       >
         <p>Pendidikan Terakhir</p>
         <img src="/img/profil/hat.png" />
-        <p>S3 Informatics Universitas Colorado</p>
+        <p>S2 Teknik Informatika Institut Teknologi Bandung</p>
       </div>
     </div>
   );

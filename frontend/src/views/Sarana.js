@@ -1,5 +1,5 @@
 import "../App.css";
-import Banner from "../components/BannerCard";
+import Banner from "../components/Banner";
 import ContentList from "../components/ContentList";
 
 const Sarana = () => {

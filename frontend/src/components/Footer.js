@@ -26,16 +26,16 @@ const Footer = () => {
         </div>
         <div className="w-1/5 flex flex-col">
           <p className="pb-3 mb-4 border-bottom text-white">Program Studi</p>
-          <a href="/d3" className="hover:underline text-base mb-2">
+          <a href="/profil/d3" className="hover:underline text-base mb-2">
             D3 Teknik Informatika
           </a>
-          <a href="/d4" className="hover:underline text-base mb-2">
+          <a href="/profil/d4" className="hover:underline text-base mb-2">
             D4 Teknik Informatika
           </a>
         </div>
         <div className="w-1/5 flex flex-col">
           <p className="pb-3 mb-4 border-bottom text-white">Tentang JTK</p>
-          <a href="/jurusan" className="hover:underline text-base mb-2">
+          <a href="/profil/jurusan" className="hover:underline text-base mb-2">
             Profil
           </a>
           <a href="/dosen" className="hover:underline text-base mb-2">

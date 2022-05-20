@@ -1,6 +1,6 @@
 import "../App.css";
 import { Link, useParams } from "react-router-dom";
-import Banner from "../components/BannerCard";
+import Banner from "../components/Banner";
 import ContentList from "../components/ContentList";
 
 const Prestasi = () => {

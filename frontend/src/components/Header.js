@@ -59,15 +59,15 @@ const Header = () => {
             dropdownList={[
               {
                 title: "Profil Jurusan",
-                url: "/jurusan",
+                url: "/profil/jurusan",
               },
               {
                 title: "D3 Teknik Informatika",
-                url: "/d3",
+                url: "/profil/d3",
               },
               {
                 title: "D4 Teknik Informatika",
-                url: "/d4",
+                url: "/profil/d4",
               },
             ]}
           />
@@ -89,12 +89,12 @@ const Header = () => {
             dropdownList={[
               {
                 title: "Daftar Prestasi",
-                url: "/prestasi",
+                url: "/prestasi/mahasiswa",
               },
             ]}
           />
           <Link
-            to="/tracer-study"
+            to="/tracer-study/2019"
             className="bg-[#191919] border border-[#1A2C43] px-6 py-3 flex-auto hover:bg-[#FF7F00]"
           >
             Tracer Study

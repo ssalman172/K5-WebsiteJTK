@@ -15,6 +15,7 @@ import InfoKontak from "../views/InfoKontak";
 import Agenda from "../views/Agenda";
 import Prestasi from "../views/Prestasi";
 import DaftarPrestasi from "../views/KerjaSama";
+import TracerStudy from "../views/TracerStudy";
 
 const Main = () => {
   return (
@@ -31,10 +32,12 @@ const Main = () => {
       <Route path="/info-kontak" element={<InfoKontak />} />
       <Route path="/agenda" element={<Agenda />} />
       <Route path="/kerja-sama/:sub_url" element={<DaftarPrestasi />} />
-      <Route path="/jurusan" element={<ProfilJurusan />} />
-      <Route path="/d3" element={<ProfilD3 />} />
-      <Route path="/d4" element={<ProfilD4 />} />
+      <Route path="/profil/jurusan" element={<ProfilJurusan />} />
+      <Route path="/profil/d3" element={<ProfilD3 />} />
+      <Route path="/profil/d4" element={<ProfilD4 />} />
       <Route path="/prestasi/:sub_url" element={<Prestasi />} />
+      <Route path="/tracer-study/:sub_url" element={<TracerStudy />} />
+      <Route path="/kurikulum" element={<div><h1 className="text-8xl text-center m5">Not yet implemented</h1></div>} />
     </Routes>
   );
 };

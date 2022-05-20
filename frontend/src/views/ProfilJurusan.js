@@ -38,20 +38,6 @@ const ProfilJurusan = () => {
         visi="JTK memiliki visi untuk menjadi jurusan unggulan dan terdepan di bidang pengkajian, penerapan dan pengembangan teknologi informasi, yang diakui baik di tingkat nasional maupun internasional." 
         misi={misi}  
       />
-      <div className='w-7/12 mr-auto ml-auto flex justify-center mt-10 mb-10 font-lora text-center'>
-        <Link to='#'>
-          <div className='mr-10'>
-            <div className='w-[240px] h-[240px] bg-[#C4C4C4]'></div>
-            <h1 className='font-bold text-4xl mt-2'>Staff</h1>
-          </div>
-        </Link>
-        <Link to='#'>
-          <div>
-            <div className='w-[240px] h-[240px] bg-[#C4C4C4]'></div>
-            <h1 className='font-bold text-4xl mt-2'>Social</h1>
-          </div>
-        </Link>
-      </div>
     </div>
   )
 }

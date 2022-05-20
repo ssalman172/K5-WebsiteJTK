@@ -6,7 +6,7 @@ const BasicInfo = (props) => {
       <img id="basic-info-img" src="/img/profil/person.png" />
       <div className="ml3">
         <p className="font-bold text-3xl mb-10">
-          Prof. Shalahuddin Sanusi M.Eng, Ph.D
+          Bambang Wisnuadhi, S.Si., M.T.
         </p>
         <div className="grid grid-cols-2 gap-7 text-lg">
           <div className="font-normal">
@@ -23,11 +23,11 @@ const BasicInfo = (props) => {
             {props.isDosen && (
               <div>
                 <p className="mb-2">D4 Teknik Informatika</p>
-                <p className="mb-2">Cloud Computing</p>
+                <p className="mb-2">Analisis dan Perancangan Perangkat Lunak 2</p>
               </div>
             )}
             <p className="mb-2">Aktif</p>
-            <p className="mb-2">Profesor</p>
+            <p className="mb-2">Lektor</p>
           </div>
         </div>
       </div>
@@ -50,15 +50,7 @@ const ProjectInfo = (props) => {
         </div>
         <ul className="list-disc text-xl font-normal">
           <li className="mb-2 ml2">
-            Improvisasi Fitur serta Kinerja Teknologi Telekomunikasi untuk
-            Mitigasi Bencana (2020)
-          </li>
-          <li className="mb-2 ml2">
-            Pengembangan dan Produksi Radar Nasional (2015)
-          </li>
-          <li className="mb-2 ml2">
-            Pengembangan Konten Middleware Untuk Aplikasi Distribusi Materi Ajar
-            Pada Siaran TV Digital DVBHPe (2011)
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, hic? (202X)
           </li>
         </ul>
       </div>
@@ -75,25 +67,25 @@ const ProfilDetailCard = (props) => {
       <div className="rounded bg-navyblue text-white mb3 p3">
         <p className="text-3xl font-bold mb3">Education</p>
         <div className="mb2">
-          <p className="text-3xl font-bold">S1</p>
+          <p className="text-3xl font-bold">D3</p>
           <p className="text-xl font-normal">
-            Institut Teknologi Bandung, Bandung, Jawa Barat, Indonesia
+            Politeknik Negeri Bandung, Bandung, Jawa Barat, Indonesia
           </p>
-          <p className="text-xl font-normal">1995</p>
+          <p className="text-xl font-normal">1994</p>
         </div>
         <div className="mb2">
+          <p className="text-3xl font-bold">S1</p>
+          <p className="text-xl font-normal">
+            Universitas Padjadjaran, Bandung, Jawa Barat, Indonesia
+          </p>
+          <p className="text-xl font-normal">1997</p>
+        </div>
+        <div>
           <p className="text-3xl font-bold">S2</p>
           <p className="text-xl font-normal">
             Institut Teknologi Bandung, Bandung, Jawa Barat, Indonesia
           </p>
-          <p className="text-xl font-normal">1999</p>
-        </div>
-        <div>
-          <p className="text-3xl font-bold">S3</p>
-          <p className="text-xl font-normal">
-            Colorado University, United States
-          </p>
-          <p className="text-xl font-normal">2000</p>
+          <p className="text-xl font-normal">2002</p>
         </div>
       </div>
       {/* Project Info */}

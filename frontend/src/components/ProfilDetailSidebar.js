@@ -8,7 +8,7 @@ const ProfilDetailSidebar = () => {
       className="w-1/5 bg-navyblue flex flex-col font-lora text-white text-xl font-normal rounded"
     >
       <a href="#" className="sidebar-item">
-        <p>Shalahuddin Sanusi</p>
+        <p>Bambang Wisnuadhi</p>
       </a>
       <a href="#" className="sidebar-item">
         <p>Dosen #</p>
@@ -35,7 +35,7 @@ const ProfilDetailSidebar = () => {
         <p>Dosen #</p>
       </a>
       <a href="#" className="sidebar-item">
-        <p>Shalahuddin Sanusi</p>
+        <p>Dosen #</p>
       </a>
       <a href="#" className="sidebar-item">
         <p>Dosen #</p>
