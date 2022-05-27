@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artikels",
+  "info": {
+    "name": "Artikel"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Judul": {
+      "type": "string"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Tag": {
+      "type": "string"
+    },
+    "Tanggal": {
+      "type": "datetime"
+    },
+    "MediaGambar": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "AuthorGamar": {
+      "type": "text"
+    },
+    "Artikel": {
+      "type": "text"
+    }
+  }
+}

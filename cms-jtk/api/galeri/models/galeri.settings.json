@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galeris",
+  "info": {
+    "name": "Galeri"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Judul": {
+      "type": "string"
+    },
+    "Deskripsi": {
+      "type": "text"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Tanggal": {
+      "type": "date"
+    }
+  }
+}

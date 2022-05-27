@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profil_dosens",
+  "info": {
+    "name": "ProfilDosen",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NamaDosen": {
+      "type": "string"
+    },
+    "DomisiliDosen": {
+      "type": "string"
+    },
+    "JenisKelamin": {
+      "type": "string"
+    },
+    "JabatanFungsional": {
+      "type": "string"
+    },
+    "PendidikanTertinggi": {
+      "type": "string"
+    },
+    "StatusIkatanKerja": {
+      "type": "string"
+    },
+    "StatusAktivitas": {
+      "type": "string"
+    },
+    "Expertise": {
+      "type": "string"
+    },
+    "KBK": {
+      "type": "string"
+    },
+    "MataKuliahyangDiampu": {
+      "type": "string"
+    },
+    "PengalamanProyekProduk": {
+      "type": "text"
+    },
+    "PengalamanKegiatanPenelitian": {
+      "type": "string"
+    },
+    "Prestasi": {
+      "type": "string"
+    },
+    "DaftarPublikasiIlmiah": {
+      "type": "text"
+    },
+    "PendidikanTerakhir": {
+      "type": "string"
+    },
+    "Education": {
+      "type": "text"
+    },
+    "Foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/profil-staffs",
+      "handler": "profil-staff.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/profil-staffs/count",
+      "handler": "profil-staff.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/profil-staffs/:id",
+      "handler": "profil-staff.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/profil-staffs",
+      "handler": "profil-staff.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/profil-staffs/:id",
+      "handler": "profil-staff.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/profil-staffs/:id",
+      "handler": "profil-staff.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

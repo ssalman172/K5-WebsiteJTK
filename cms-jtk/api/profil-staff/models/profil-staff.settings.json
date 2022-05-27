@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profil_staffs",
+  "info": {
+    "name": "ProfilStaff"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NamaStaff": {
+      "type": "string"
+    },
+    "Domisili": {
+      "type": "string"
+    },
+    "JenisKelamin": {
+      "type": "string"
+    },
+    "JabatanFungsional": {
+      "type": "string"
+    },
+    "PendidikanTertinggi": {
+      "type": "string"
+    },
+    "StatusIkatanKerja": {
+      "type": "string"
+    },
+    "StatusAktivitas": {
+      "type": "string"
+    },
+    "Education": {
+      "type": "text"
+    },
+    "Foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

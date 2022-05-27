@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prodi_d3s",
+  "info": {
+    "name": "ProdiD3"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Visi": {
+      "type": "text"
+    },
+    "Misi": {
+      "type": "text"
+    },
+    "FotoKetuaProdi": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "NamaKetuaProdi": {
+      "type": "string"
+    }
+  }
+}

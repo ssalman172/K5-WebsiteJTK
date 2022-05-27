@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kerja-samas",
+      "handler": "kerja-sama.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kerja-samas/count",
+      "handler": "kerja-sama.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kerja-samas/:id",
+      "handler": "kerja-sama.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kerja-samas",
+      "handler": "kerja-sama.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kerja-samas/:id",
+      "handler": "kerja-sama.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kerja-samas/:id",
+      "handler": "kerja-sama.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

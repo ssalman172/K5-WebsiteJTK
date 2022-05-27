@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/profil-dosens",
+      "handler": "profil-dosen.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/profil-dosens/count",
+      "handler": "profil-dosen.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/profil-dosens/:id",
+      "handler": "profil-dosen.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/profil-dosens",
+      "handler": "profil-dosen.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/profil-dosens/:id",
+      "handler": "profil-dosen.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/profil-dosens/:id",
+      "handler": "profil-dosen.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profil_jurusans",
+  "info": {
+    "name": "ProfilJurusan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FotoKetuaJurusan": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "SambutanKetuaJurusan": {
+      "type": "text"
+    },
+    "SejarahJTKPolban": {
+      "type": "text"
+    },
+    "Visi": {
+      "type": "text"
+    },
+    "Misi": {
+      "type": "text"
+    }
+  }
+}

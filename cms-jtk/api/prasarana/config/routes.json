@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/prasaranas",
+      "handler": "prasarana.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prasaranas/count",
+      "handler": "prasarana.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prasaranas/:id",
+      "handler": "prasarana.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/prasaranas",
+      "handler": "prasarana.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/prasaranas/:id",
+      "handler": "prasarana.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/prasaranas/:id",
+      "handler": "prasarana.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

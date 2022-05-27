@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kurikulums",
+      "handler": "kurikulum.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kurikulums/count",
+      "handler": "kurikulum.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kurikulums/:id",
+      "handler": "kurikulum.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kurikulums",
+      "handler": "kurikulum.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kurikulums/:id",
+      "handler": "kurikulum.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kurikulums/:id",
+      "handler": "kurikulum.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

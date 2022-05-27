@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/prodi-d-4-s",
+      "handler": "prodi-d4.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prodi-d-4-s/count",
+      "handler": "prodi-d4.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prodi-d-4-s/:id",
+      "handler": "prodi-d4.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/prodi-d-4-s",
+      "handler": "prodi-d4.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/prodi-d-4-s/:id",
+      "handler": "prodi-d4.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/prodi-d-4-s/:id",
+      "handler": "prodi-d4.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

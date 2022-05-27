@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kurikulums",
+  "info": {
+    "name": "Kurikulum"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Data": {
+      "type": "json"
+    }
+  }
+}

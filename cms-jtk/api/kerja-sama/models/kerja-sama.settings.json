@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kerja_samas",
+  "info": {
+    "name": "KerjaSama"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TeksKerjasamaInternasional": {
+      "type": "text"
+    },
+    "TeksKerjasamaNasional": {
+      "type": "text"
+    },
+    "LogoKerjaSama": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
