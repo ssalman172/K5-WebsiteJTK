@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "galeris",
   "info": {
-    "name": "Galeri"
+    "name": "Galeri",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -22,6 +23,18 @@
     },
     "Tanggal": {
       "type": "date"
+    },
+    "Gambar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
