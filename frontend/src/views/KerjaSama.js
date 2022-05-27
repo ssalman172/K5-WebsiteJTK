@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import Banner from '../components/Banner'
 import Pagination from '../components/Pagination';
@@ -29,12 +29,13 @@ const DaftarPrestasi = () => {
   const selectionNotActiveClass =
     "color-navyblue font-normal opacity-50 hover:underline hover:opacity-100 hover:cursor-pointer";
   const sub_url = useParams().sub_url;
+  const paginationContainerRef = useRef();
 
   return (
     <div>
       <Banner title="Info Kerja Sama" img="/img/kerja-sama/banner.png" />
       <div className="w-7/12 mr-auto ml-auto font-lora">
-        <div className="flex flex-col items-center mb3 mt3">
+        <div className="flex flex-col items-center mb3 mt3" ref={paginationContainerRef}>
           <div className="flex text-4xl w-full justify-around">
             <Link to="/kerja-sama/internasional">
               <span
@@ -91,6 +92,7 @@ const DaftarPrestasi = () => {
               itemsPerPage={9}
               wholeDataGetter={images}
               currentDataSetter={setCurrentItems}
+              offsetTop={paginationContainerRef.current?.offsetTop}
             />
           </div>
         )}

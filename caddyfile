@@ -1,0 +1,11 @@
+jtk.my.id {
+  route /* {
+    root frontend/build
+    file_server
+    try_files {path} /index.html
+  }
+  route /cms* {
+    uri strip_prefix /cms
+    reverse_proxy 127.0.0.1:1337
+  }
+}

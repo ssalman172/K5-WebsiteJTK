@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import "../styles/profil-card.css";
 
-const ProfilCard = (props) => {
+const ProfilCard = ({isDosen, profileData}) => {
   return (
     <div
       id="profil-card"
@@ -19,9 +19,9 @@ const ProfilCard = (props) => {
           </div>
           <div className="flex flex-col justify-around">
             <Link to='/dosen-detail'>
-              <p className="my-2 text-xl hover:underline">Bambang Wisnuadhi, S.Si., M.T.</p>
+              <p className="my-2 text-xl hover:underline">{profileData?.nama}</p>
             </Link>
-            <p className="my-2 text-base">Bandung, Indonesia</p>
+            <p className="my-2 text-base">{profileData?.domisili}</p>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@ const ProfilCard = (props) => {
           <p>Pendidikan Tertinggi</p>
           <p>Status Ikatan Kerja</p>
           <p>Status Aktivitas</p>
-          {props.isDosen && (
+          {isDosen && (
             <div>
               <p>Expertise</p>
               <p>KBK</p>
@@ -46,20 +46,20 @@ const ProfilCard = (props) => {
           )}
         </div>
         <div>
-          <p>: Laki - laki</p>
-          <p>: Lektor</p>
-          <p>: S2</p>
-          <p>: Dosen Tetap</p>
-          <p>: Aktif</p>
-          {props.isDosen && (
+          <p>: {profileData?.kelamin || '-'}</p>
+          <p>: {profileData?.jabatan || '-'}</p>
+          <p>: {profileData?.pendidikan || '-'}</p>
+          <p>: {profileData?.statusIkatanKerja || '-'}</p>
+          <p>: {profileData?.statusAktivitas || '-'}</p>
+          {isDosen && (
             <div>
-              <p>: -</p>
-              <p>: -</p>
-              <p>: Analisis dan Perancangan Perangkat Lunak 2</p>
-              <p>: -</p>
-              <p>: -</p>
-              <p>: -</p>
-              <p>: -</p>
+              <p>: {profileData?.expertise || '-'}</p>
+              <p>: {profileData?.kbk || '-'}</p>
+              <p>: {profileData?.mataKuliah || '-'}</p>
+              <p>: {profileData?.pengalamanProyek || '-'}</p>
+              <p>: {profileData?.pengalamanKegiatan || '-'}</p>
+              <p>: {profileData?.prestasi || '-'}</p>
+              <p>: {profileData?.publikasiIlmiah || '-'}</p>
             </div>
           )}
         </div>
@@ -71,7 +71,7 @@ const ProfilCard = (props) => {
       >
         <p>Pendidikan Terakhir</p>
         <img src="/img/profil/hat.png" />
-        <p>S2 Teknik Informatika Institut Teknologi Bandung</p>
+        <p>{profileData?.pendidikanTerakhir || '-'}</p>
       </div>
     </div>
   );

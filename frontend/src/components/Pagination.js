@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate';
+import {animateScroll as scroll} from 'react-scroll';
 
-const Pagination = ({itemsPerPage, wholeDataGetter, currentDataSetter}) => {
+const Pagination = ({itemsPerPage, wholeDataGetter, currentDataSetter, offsetTop}) => {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
@@ -14,6 +15,10 @@ const Pagination = ({itemsPerPage, wholeDataGetter, currentDataSetter}) => {
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % wholeDataGetter.length;
     setItemOffset(newOffset);
+    scroll.scrollTo( offsetTop || 0,{
+      duration: 400,
+    });
+    console.log(offsetTop);
   };
 
   return (

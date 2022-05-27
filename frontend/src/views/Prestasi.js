@@ -48,11 +48,24 @@ const Prestasi = () => {
             </span>
           </Link>
         </div>
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
+        <ContentList
+          isArtikel={false}
+          title='Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra molestie amet. Id erat faucibus odio mus lectus rhoncus porta. Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus dolor at.'
+          img='/img/artikel-news/artikel1.png'
+        />
+        <ContentList
+          isArtikel={false}
+          title='Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra molestie amet. Id erat faucibus odio mus lectus rhoncus porta. Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus dolor at.'
+          img='/img/artikel-news/artikel1.png'
+        />
+        <ContentList
+          isArtikel={false}
+          title='Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra molestie amet. Id erat faucibus odio mus lectus rhoncus porta. Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus dolor at.'
+          img='/img/artikel-news/artikel1.png'
+        />
       </div>
     </div>
   );

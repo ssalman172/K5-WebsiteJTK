@@ -19,11 +19,30 @@ const Sarana = () => {
             Prasarana
           </a>
         </div>
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
-        <ContentList isArtikel={false} />
+        <ContentList
+          isArtikel={false}
+          title='Ruang Kelas'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra molestie amet. Id erat faucibus odio mus lectus rhoncus porta. Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus dolor at.'
+          img='/img/sarana-prasarana/sarana1.png'
+        />
+        <ContentList
+          isArtikel={false}
+          title='Ruang Kelas'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra molestie amet. Id erat faucibus odio mus lectus rhoncus porta. Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus dolor at.'
+          img='/img/sarana-prasarana/sarana1.png'
+        />
+        <ContentList
+          isArtikel={false}
+          title='Ruang Kelas'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra molestie amet. Id erat faucibus odio mus lectus rhoncus porta. Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus dolor at.'
+          img='/img/sarana-prasarana/sarana1.png'
+        />
+        <ContentList
+          isArtikel={false}
+          title='Ruang Kelas'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra molestie amet. Id erat faucibus odio mus lectus rhoncus porta. Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh cras lectus dolor at.'
+          img='/img/sarana-prasarana/sarana1.png'
+        />
       </div>
     </div>
   );

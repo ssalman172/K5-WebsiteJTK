@@ -28,7 +28,7 @@ const InfoKontak = () => {
             </div>
             <textarea
               type="text"
-              placeholder="Nama Lengkap"
+              placeholder="Pesan"
               className="bg-[#1A2C43] pb-3 outline-none border-b border-[#FFFFFF] w-full h-[150px] resize-none mb-6"
             />
             <input

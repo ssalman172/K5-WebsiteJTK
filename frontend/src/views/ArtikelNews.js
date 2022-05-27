@@ -12,11 +12,11 @@ const ArtikelNews = () => {
           <h1 className="font-lora font-bold color-navyblue text-[40px] my-[2%]">
             Berita JTK
           </h1>
-          <ContentList isArtikel={true} />
-          <ContentList isArtikel={true} />
-          <ContentList isArtikel={true} />
-          <ContentList isArtikel={true} />
-          <ContentList isArtikel={true} />
+          <ContentList isArtikel={true} img='/img/artikel-news/artikel1.png'/>
+          <ContentList isArtikel={true} img='/img/artikel-news/artikel1.png'/>
+          <ContentList isArtikel={true} img='/img/artikel-news/artikel1.png'/>
+          <ContentList isArtikel={true} img='/img/artikel-news/artikel1.png'/>
+          <ContentList isArtikel={true} img='/img/artikel-news/artikel1.png'/>
         </div>
         <div className="mt3">
           <RilisBerita />
