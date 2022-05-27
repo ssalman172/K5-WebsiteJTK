@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 import "../styles/landing.css";
 
@@ -13,16 +14,20 @@ const LandingPage = () => {
         <div className="prodi-card flex flex-col items-center justify-center mr5">
           <p className="text-white text-8xl mb-5">D3</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>
-          <a href="/profil/d3" className="text-sm prodi-card-btn py-2 px-5">
-            Selengkapnya
-          </a>
+          <Link to='/profil/d3'>
+            <span className="text-sm prodi-card-btn py-2 px-5">
+              Selengkapnya
+            </span>
+          </Link>
         </div>
         <div className="prodi-card flex flex-col items-center justify-center ml5">
           <p className="text-white text-8xl mb-5">D4</p>
           <p className="text-white text-2xl mb-5">Teknik Informatika</p>
-          <a href="/profil/d4" className="text-sm prodi-card-btn py-2 px-5">
-            Selengkapnya
-          </a>
+          <Link to='/profil/d4'>
+            <span className="text-sm prodi-card-btn py-2 px-5">
+              Selengkapnya
+            </span>
+          </Link>
         </div>
       </div>
 

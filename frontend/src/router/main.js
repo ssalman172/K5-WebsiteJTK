@@ -16,6 +16,8 @@ import Agenda from "../views/Agenda";
 import Prestasi from "../views/Prestasi";
 import DaftarPrestasi from "../views/KerjaSama";
 import TracerStudy from "../views/TracerStudy";
+import Kurikulum from "../views/Kurikulum";
+
 
 const Main = () => {
   return (
@@ -28,7 +30,7 @@ const Main = () => {
       <Route path="/sarana" element={<Sarana />} />
       <Route path="/prasarana" element={<Prasarana />} />
       <Route path="/artikel-news" element={<ArtikelNews />} />
-      <Route path="/artikel-news-detail" element={<ArtikelNewsDetail />} />
+      <Route path="/artikel-news/:id" element={<ArtikelNewsDetail />} />
       <Route path="/info-kontak" element={<InfoKontak />} />
       <Route path="/agenda" element={<Agenda />} />
       <Route path="/kerja-sama/:sub_url" element={<DaftarPrestasi />} />
@@ -37,7 +39,7 @@ const Main = () => {
       <Route path="/profil/d4" element={<ProfilD4 />} />
       <Route path="/prestasi/:sub_url" element={<Prestasi />} />
       <Route path="/tracer-study/:sub_url" element={<TracerStudy />} />
-      <Route path="/kurikulum" element={<div><h1 className="text-8xl text-center m5">Not yet implemented</h1></div>} />
+      <Route path="/kurikulum/:category" element={<Kurikulum/>} />
     </Routes>
   );
 };

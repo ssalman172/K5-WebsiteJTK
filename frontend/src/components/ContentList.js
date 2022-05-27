@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 
-const ContentList = ({isArtikel, title, content, img}) => {
+const ContentList = ({ isArtikel, title, content, img, date, category }) => {
   return (
     <div
       className="flex justify-between font-lora mb2 pb-4"
@@ -8,9 +9,11 @@ const ContentList = ({isArtikel, title, content, img}) => {
     >
       {!isArtikel &&
         <div>
-          <a href="#" className="text-3xl color-navyblue hover:underline">
-            {title}
-          </a>
+          <Link to={'#'}>
+            <span className="text-3xl color-navyblue hover:underline">
+              {title}
+            </span>
+          </Link>
           <p className="text-sm mt2">
             {content}
           </p>
@@ -21,19 +24,16 @@ const ContentList = ({isArtikel, title, content, img}) => {
       />
       {isArtikel &&
         <div className="ml2">
-          <a href="#" className="text-xl color-navyblue hover:underline">
-            Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020
-          </a>
+          <Link to={'/artikel-news/2020'}>
+            <span className="text-3xl color-navyblue hover:underline">
+              {title}
+            </span>
+          </Link>
           <p className="text-xs color-navyblue opacity-70 mt1">
-            Akademik | 23 November 2021
+            {category} | {date}
           </p>
           <p className="text-sm mt2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-            scelerisque sit rhoncus ut pulvinar. Purus a, congue lacinia felis
-            sit non pulvinar mus. Turpis sem nibh cras lectus at dolor viverra
-            molestie amet. Id erat faucibus odio mus lectus rhoncus porta.
-            Pulvinar, congue lacinia felis sit non pulvinar mus. Turpis sem nibh
-            cras lectus dolor at.
+            {content}
           </p>
         </div>}
     </div>
