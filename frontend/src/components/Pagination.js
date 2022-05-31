@@ -10,7 +10,7 @@ const Pagination = ({itemsPerPage, wholeDataGetter, currentDataSetter, offsetTop
     const endOffset = itemOffset + itemsPerPage;
     currentDataSetter(wholeDataGetter.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(wholeDataGetter.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+  }, [itemOffset, itemsPerPage, wholeDataGetter]);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % wholeDataGetter.length;

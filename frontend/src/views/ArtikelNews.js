@@ -1,72 +1,23 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../App.css";
 import Banner from "../components/Banner";
 import ContentList from "../components/ContentList";
 import Pagination from "../components/Pagination";
 import RilisBerita from "../components/RilisBerita";
-
-const dummyData = [
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png',
-    category: 'akademik',
-    date: '23 November 2021'
-  },
-]
+import { BASE_URL } from "../datasource/consts";
+import { fetchAll } from "../datasource/routes/artikel";
+import Moment from "moment";
 
 const ArtikelNews = () => {
   const [currentItems, setCurrentItems] = useState([]);
   const paginationContainerRef = useRef();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchAll().then((newData) => {
+      setData(newData);
+    })
+  }, []);
 
   return (
     <div>
@@ -81,11 +32,12 @@ const ArtikelNews = () => {
               return (
                 <ContentList
                   isArtikel={true}
-                  title={elem.title}
-                  content={elem.content}
-                  img={elem.img}
-                  category={elem.category}
-                  date={elem.date}
+                  id={elem?.id}
+                  title={elem?.Judul}
+                  content={elem?.Artikel}
+                  img={BASE_URL + (elem?.MediaGambar ?? [])[0]?.url}
+                  category={elem?.Tag}
+                  date={Moment(elem?.Tanggal).format('DD-MM-YYYY')}
                 />
               )
             })
@@ -93,7 +45,7 @@ const ArtikelNews = () => {
           <div className="mb-5">
             <Pagination
               itemsPerPage={6}
-              wholeDataGetter={dummyData}
+              wholeDataGetter={data}
               currentDataSetter={setCurrentItems}
               offsetTop={paginationContainerRef.current?.offsetTop}
             />

@@ -19,9 +19,9 @@ const ProfilCard = ({isDosen, profileData}) => {
           </div>
           <div className="flex flex-col justify-around">
             <Link to='/dosen-detail'>
-              <p className="my-2 text-xl hover:underline">{profileData?.nama}</p>
+              <p className="my-2 text-xl hover:underline">{profileData?.NamaDosen}</p>
             </Link>
-            <p className="my-2 text-base">{profileData?.domisili}</p>
+            <p className="my-2 text-base">{profileData?.DomisiliDosen}</p>
           </div>
         </div>
       </div>
@@ -46,20 +46,20 @@ const ProfilCard = ({isDosen, profileData}) => {
           )}
         </div>
         <div>
-          <p>: {profileData?.kelamin || '-'}</p>
-          <p>: {profileData?.jabatan || '-'}</p>
-          <p>: {profileData?.pendidikan || '-'}</p>
-          <p>: {profileData?.statusIkatanKerja || '-'}</p>
-          <p>: {profileData?.statusAktivitas || '-'}</p>
+          <p>: {profileData?.JenisKelamin || '-'}</p>
+          <p>: {profileData?.JabatanFungsional || '-'}</p>
+          <p>: {profileData?.PendidikanTertinggi || '-'}</p>
+          <p>: {profileData?.StatusIkatanKerja || '-'}</p>
+          <p>: {profileData?.StatusAktivitas || '-'}</p>
           {isDosen && (
             <div>
-              <p>: {profileData?.expertise || '-'}</p>
-              <p>: {profileData?.kbk || '-'}</p>
-              <p>: {profileData?.mataKuliah || '-'}</p>
-              <p>: {profileData?.pengalamanProyek || '-'}</p>
-              <p>: {profileData?.pengalamanKegiatan || '-'}</p>
-              <p>: {profileData?.prestasi || '-'}</p>
-              <p>: {profileData?.publikasiIlmiah || '-'}</p>
+              <p>: {profileData?.Expertise || '-'}</p>
+              <p>: {profileData?.KBK || '-'}</p>
+              <p>: {profileData?.MataKuliahyangDiampu || '-'}</p>
+              <p>: {profileData?.PengalamanProyekProduk || '-'}</p>
+              <p>: {profileData?.PengalamanKegiatanPenelitian || '-'}</p>
+              <p>: {profileData?.Prestasi || '-'}</p>
+              <p>: {profileData?.DaftarPublikasiIlmiah || '-'}</p>
             </div>
           )}
         </div>
@@ -71,7 +71,7 @@ const ProfilCard = ({isDosen, profileData}) => {
       >
         <p>Pendidikan Terakhir</p>
         <img src="/img/profil/hat.png" />
-        <p>{profileData?.pendidikanTerakhir || '-'}</p>
+        <p>{profileData?.PendidikanTerakhir || '-'}{profileData?.Education}</p>
       </div>
     </div>
   );

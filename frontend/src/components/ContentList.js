@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const ContentList = ({ isArtikel, title, content, img, date, category }) => {
+const ContentList = ({ id, isArtikel, title, content, img, date, category }) => {
   return (
     <div
       className="flex justify-between font-lora mb2 pb-4"
@@ -24,7 +24,7 @@ const ContentList = ({ isArtikel, title, content, img, date, category }) => {
       />
       {isArtikel &&
         <div className="ml2">
-          <Link to={'/artikel-news/2020'}>
+          <Link to={`/artikel-news/${id}`}>
             <span className="text-3xl color-navyblue hover:underline">
               {title}
             </span>

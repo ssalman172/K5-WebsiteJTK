@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../components/Banner'
 import EmbedVideo from '../components/EmbedVideo'
 import VisiMisi from '../components/VisiMisi'
+import { BASE_URL } from '../datasource/consts'
+import { fetchAll } from '../datasource/routes/profilD3'
 
 const ProfilD3 = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchAll().then((newData) => {
+      setData(newData);
+    })
+  }, []);
+
   return (
     <div>
       <Banner img='/img/landing/banner.png' />
@@ -17,17 +27,15 @@ const ProfilD3 = () => {
         <EmbedVideo url='https://www.youtube.com/embed/sauzoenoYns'/>
       </div>
       <VisiMisi
-        visi="Menjadi Program Studi unggulan dan terdepan dalam program pendidikan diploma III Kerekayasaan
-        Perangkat Lunak Aplikasi yang diakui baik di tingkat nasional maupun internasional."
-        misi="Menyelenggarakan program pendidikan diploma III Kerekayasaan Perangkat Lunak Aplikasi yang diakui
-        baik di tingkat nasional maupun internasional."
+        visi={data[0]?.Visi}
+        misi={data[0]?.Misi.includes(';') ? data[0]?.Misi.split(';') : data[0]?.Misi}
       />
       <div className='w-2/12 mr-auto ml-auto mt-20 mb-20'>
       <h1 className='font-bold text-2xl text-center mb-4'>Ketua Program Studi</h1>
         <div>
-          <img src="/img/kaprodi_d3.png" className='rounded-full object-cover h-[300px] w-[300px] mr-auto ml-auto object-top'/>
+          <img src={BASE_URL+data[0]?.FotoKetuaProdi.url} className='rounded-full object-cover h-[300px] w-[300px] mr-auto ml-auto object-top'/>
         </div>
-        <h1 className='font-bold text-xl text-center mt-4'>Ghifari Munawar, S.Kom., M.T</h1>
+        <h1 className='font-bold text-xl text-center mt-4'>{data[0]?.NamaKetuaProdi}</h1>
       </div>
     </div>
   )

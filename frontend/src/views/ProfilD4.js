@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../components/Banner'
 import EmbedVideo from '../components/EmbedVideo'
 import VisiMisi from '../components/VisiMisi'
-
-const misi = [
-  'Menyelenggarakan program pendidikan yang menghasilkan sarjana terapan di bidang Rekayasa Perangkat Lunak yang kompeten, bermoral, berjiwa wirausaha, berwawasan lingkungan serta mampu bersaing di tingkat nasional maupun internasional',
-  'Melaksanakan penelitian dibidang Teknologi Informasi yang dapat diterapkan pada Industri atau masyarakat ditingkat nasional maupun internasional',
-  'Melakukan pengabdian kepada masyarakat melalui diseminasi ilmu dan penerapannya di lingkup nasional.'
-]
+import { BASE_URL } from '../datasource/consts'
+import { fetchAll } from '../datasource/routes/profilD4'
 
 const ProfilD4 = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchAll().then((newData) => {
+      setData(newData);
+    })
+  }, []);
+
   return (
     <div>
       <Banner img='/img/landing/banner.png' />
@@ -23,15 +27,15 @@ const ProfilD4 = () => {
         <EmbedVideo url='https://www.youtube.com/embed/sauzoenoYns'/>
       </div>
       <VisiMisi
-        visi="Menjadi Program Studi unggulan pada jenjang pendidikan diploma IV di bidang Teknik Informatika sehingga mampu menghasilkan tenaga profesional pengembang perangkat lunak yang kompeten, memiliki semangat terus berkembang,bermoral, dan berjiwa wirausaha."
-        misi={misi}
+        visi={data[0]?.Visi}
+        misi={data[0]?.Misi.includes(';') ? data[0]?.Misi.split(';') : data[0]?.Misi}
       />
       <div className='w-2/12 mr-auto ml-auto mt-20 mb-20'>
       <h1 className='font-bold text-2xl text-center mb-4'>Ketua Program Studi</h1>
         <div>
-          <img src="/img/sample_profile_img.png" className='rounded-full object-cover h-[300px] w-[300px] mr-auto ml-auto object-top'/>
+          <img src={BASE_URL+data[0]?.FotoKetuaProdi.url} className='rounded-full object-cover h-[300px] w-[300px] mr-auto ml-auto object-top'/>
         </div>
-        <h1 className='font-bold text-xl text-center mt-4'>Santi Sundari, S.Si., M.T.</h1>
+        <h1 className='font-bold text-xl text-center mt-4'>{data[0]?.NamaKetuaProdi}</h1>
       </div>
     </div>
   )

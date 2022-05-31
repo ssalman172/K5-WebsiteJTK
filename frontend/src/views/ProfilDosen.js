@@ -1,7 +1,8 @@
 import "../App.css";
 import ProfilCard from "../components/ProfilCard";
 import Pagination from '../components/Pagination';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchAll } from "../datasource/routes/profilDosen";
 
 const dataDosen = [
   {
@@ -68,6 +69,13 @@ const dataDosen = [
 
 const ProfilDosen = () => {
   const [currentItems, setCurrentItems] = useState([]);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchAll().then((newData) => {
+      setData(newData);
+    })
+  }, []);
 
   return (
     <div className="w-11/12 mx-auto">
@@ -79,7 +87,7 @@ const ProfilDosen = () => {
       <div className="mb-5">
         <Pagination
           itemsPerPage={3}
-          wholeDataGetter={dataDosen}
+          wholeDataGetter={data}
           currentDataSetter={setCurrentItems}
         />
       </div>
