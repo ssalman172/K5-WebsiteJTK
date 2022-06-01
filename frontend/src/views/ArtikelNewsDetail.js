@@ -13,10 +13,8 @@ const ArtikelNewsDetail = () => {
   useEffect(() => {
     fetchOne(id).then((newData) => {
       setData(newData);
-    })
+    });
   }, []);
-
-  console.log(data);
 
   return (
     <div className="w-5/6 font-lora mx-auto mt5 mb5">
@@ -28,7 +26,7 @@ const ArtikelNewsDetail = () => {
           {data?.Author} - {data?.Tag}
         </p>
         <p className="text-sm color-navyblue opacity-70 font-bold">
-          {Moment(data?.Tanggal).format('DD-MM-YYYY')}
+          {Moment(data?.Tanggal).format("DD-MM-YYYY")}
         </p>
       </div>
       <div className="flex justify-between mx-auto">
@@ -44,9 +42,7 @@ const ArtikelNewsDetail = () => {
               </p>
             </div>
           </div>
-          <p className="text-xl indent-8 mb-2">
-            {data?.Artikel}
-          </p>
+          <p className="text-xl indent-8 mb-2">{data?.Artikel}</p>
         </div>
         <RilisBerita />
       </div>

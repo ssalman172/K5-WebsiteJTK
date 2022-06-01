@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
-import Banner from '../components/Banner'
-import Pagination from '../components/Pagination';
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import Banner from "../components/Banner";
 
 const images = [
   "/img/kerja-sama/MIT_logo.png",
@@ -35,7 +34,10 @@ const DaftarPrestasi = () => {
     <div>
       <Banner title="Info Kerja Sama" img="/img/kerja-sama/banner.png" />
       <div className="w-7/12 mr-auto ml-auto font-lora">
-        <div className="flex flex-col items-center mb3 mt3" ref={paginationContainerRef}>
+        <div
+          className="flex flex-col items-center mb3 mt3"
+          ref={paginationContainerRef}
+        >
           <div className="flex text-4xl w-full justify-around">
             <Link to="/kerja-sama/internasional">
               <span
@@ -61,28 +63,58 @@ const DaftarPrestasi = () => {
             </Link>
           </div>
           {(sub_url === "internasional" || sub_url === "nasional") && (
-            <div className="grid grid-cols-3 gap-4 w-full mt-5">
-              {currentItems.map((item) => {
-                return (
-                  <img
-                    src={item}
-                    width={320}
-                    height={320}
-                    className="self-center justify-self-center"
-                  />
-                );
-              })}
+            <div className="flex w-screen py-8 px-[6%] justify-center">
+              <div className="w-[292px] border p-7 h-[1100px] overflow-y-scroll">
+                {currentItems.map((item) => {
+                  return (
+                    <img
+                      src={item}
+                      width={280}
+                      height={280}
+                      className="self-center justify-self-center"
+                    />
+                  );
+                })}
+              </div>
+              <div className="w-3/4 ml3">
+                <h1 className="font-normal text-[40px] mb-4">
+                  Kerja Sama JTK dan Lembaga/Perusahaan
+                </h1>
+                <p className="indent-8 mb-3 text-xl">
+                  Lembaga/Perusahaan adalah perusahaan yang bergerak pada bidang
+                  lorem ipsum. JTK bekerja sama dengan lembaga mulai lorem ipsum
+                  1500s ketika lorem ipsum dolo reti.
+                </p>
+                <p className="indent-8 mb-3 text-xl">
+                  Hasil kerja sama yang telah dicapai saat ini adalah lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+                  blandit pellentesque mauris donec laoreet est tortor magna.
+                  Tellus ultrices enim rhoncus mi eget aenean hendrerit feugiat
+                  etiam. Imperdiet tempor in pulvinar et vestibulum egestas
+                  fusce suspendisse imperdiet.
+                </p>
+                <p className="indent-8 mb-3 text-xl">
+                  Tellus ultrices enim rhoncus mi eget aenean hendrerit feugiat
+                  etiam. Imperdiet tempor in pulvinar et vestibulum egestas
+                  fusce suspendisse imperdiet. Posuere blandit pellentesque
+                  mauris donec laoreet est tortor magna, pulvinar et vestibulum
+                  egestas fusce suspendisse imperdiet. Pulvinar et vestibulum
+                  egestas fusce suspendisse imperdiet. Posuere blandit
+                  pellentesque mauris donec laoreet est tortor magna, pulvinar
+                  et vestibulum egestas fusce suspendisse imperdiet
+                </p>
+                <p className="indent-8 mb-3 text-xl">
+                  Kesepakatan baru yang telah dicapai saat ini adalah lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+                  blandit pellentesque mauris donec laoreet est tortor magna.
+                  Tellus ultrices enim rhoncus mi eget aenean hendrerit feugiat
+                  etiam. Imperdiet tempor in pulvinar et vestibulum egestas
+                  fusce suspendisse imperdiet.
+                </p>
+              </div>
             </div>
           )}
         </div>
-          <div className="mb-5">
-            <Pagination
-              itemsPerPage={9}
-              wholeDataGetter={images}
-              currentDataSetter={setCurrentItems}
-              offsetTop={paginationContainerRef.current?.offsetTop}
-            />
-          </div>
       </div>
     </div>
   );
