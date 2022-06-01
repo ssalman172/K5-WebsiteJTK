@@ -2,61 +2,10 @@ import "../App.css";
 import { Link, useParams } from "react-router-dom";
 import Banner from "../components/Banner";
 import ContentList from "../components/ContentList";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Pagination from "../components/Pagination";
-
-const dummyData = [
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-  {
-    title: 'Obsterik dari JTK sabet Juara 1 Hackaton BuildOn Indonesia 2020',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae distinctio corporis enim aliquid aliquam modi sequi atque libero labore cupiditate ipsum, totam voluptatum sit. Neque illum architecto animi repudiandae perferendis. Corporis iste harum nesciunt quos? Officiis iure ab perferendis soluta eaque illo assumenda, veritatis ut sit neque est quasi expedita!',
-    img: '/img/artikel-news/artikel1.png'
-  },
-]
+import { fetchAll } from "../datasource/routes/artikel";
+import { BASE_URL } from "../datasource/consts";
 
 const Prestasi = () => {
   const selectionActiveClass = "color-navyblue underline font-bold";
@@ -65,6 +14,15 @@ const Prestasi = () => {
   const sub_url = useParams().sub_url;
   const [currentItems, setCurrentItems] = useState([]);
   const paginationContainerRef = useRef();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData([]);
+    fetchAll().then((newData) => {
+      const cleanData = newData.filter((elem) =>  elem?.Category.split('_')[1].toLowerCase() === sub_url);
+      setData(cleanData);
+    })
+  }, [sub_url]);
 
   return (
     <div>
@@ -110,9 +68,10 @@ const Prestasi = () => {
             return (
               <ContentList
                 isArtikel={false}
-                title={elem.title}
-                content={elem.content}
-                img={elem.img}
+                id={elem?.id}
+                title={elem?.Judul}
+                content={elem?.Artikel}
+                img={BASE_URL + (elem?.MediaGambar ?? [])[0]?.url}
               />
             )
           })
@@ -120,7 +79,7 @@ const Prestasi = () => {
         <div className="mb-5">
           <Pagination
             itemsPerPage={6}
-            wholeDataGetter={dummyData}
+            wholeDataGetter={data}
             currentDataSetter={setCurrentItems}
             offsetTop={paginationContainerRef.current?.offsetTop}
           />

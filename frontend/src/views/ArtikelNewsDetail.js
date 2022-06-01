@@ -5,6 +5,7 @@ import RilisBerita from "../components/RilisBerita";
 import { BASE_URL } from "../datasource/consts";
 import { fetchOne } from "../datasource/routes/artikel";
 import Moment from "moment";
+import ReactMarkdown from 'react-markdown';
 
 const ArtikelNewsDetail = () => {
   const [data, setData] = useState([]);
@@ -42,7 +43,7 @@ const ArtikelNewsDetail = () => {
               </p>
             </div>
           </div>
-          <p className="text-xl indent-8 mb-2">{data?.Artikel}</p>
+          <p className="text-xl indent-8 mb-2"><ReactMarkdown>{data?.Artikel}</ReactMarkdown></p>
         </div>
         <RilisBerita />
       </div>
