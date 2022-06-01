@@ -41,6 +41,16 @@
     },
     "Artikel": {
       "type": "richtext"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Artikel",
+        "Prestasi_Mahasiswa",
+        "Prestasi_Dosen",
+        "Prestasi_Lembaga"
+      ],
+      "required": true
     }
   }
 }
