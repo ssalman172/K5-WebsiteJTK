@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pendidikan_daftar_pendidikans",
+  "info": {
+    "name": "DaftarPendidikan",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Tingkat": {
+      "type": "string"
+    },
+    "Institusi": {
+      "type": "string"
+    },
+    "Tahun": {
+      "type": "integer"
+    },
+    "Lokasi": {
+      "type": "string"
+    },
+    "ProgramStudi": {
+      "type": "string"
+    }
+  }
+}

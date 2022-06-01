@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kerja-sama-internasionals",
+      "handler": "kerja-sama-internasional.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kerja-sama-internasionals/count",
+      "handler": "kerja-sama-internasional.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kerja-sama-internasionals/:id",
+      "handler": "kerja-sama-internasional.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kerja-sama-internasionals",
+      "handler": "kerja-sama-internasional.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kerja-sama-internasionals/:id",
+      "handler": "kerja-sama-internasional.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kerja-sama-internasionals/:id",
+      "handler": "kerja-sama-internasional.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

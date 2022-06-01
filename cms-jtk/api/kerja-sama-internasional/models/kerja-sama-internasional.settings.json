@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "artikels",
+  "collectionName": "kerja_sama_internasionals",
   "info": {
-    "name": "Artikel",
-    "description": ""
+    "name": "KerjaSamaInternasional"
   },
   "options": {
     "increments": true,
@@ -12,20 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Judul": {
+    "NamaPihak": {
       "type": "string"
     },
-    "Author": {
-      "type": "string"
+    "TeksKerjaSama": {
+      "type": "richtext"
     },
-    "Tag": {
-      "type": "string"
-    },
-    "Tanggal": {
-      "type": "datetime"
-    },
-    "MediaGambar": {
-      "collection": "file",
+    "LogoPihak": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -35,12 +28,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "AuthorGambar": {
-      "type": "text"
-    },
-    "Artikel": {
-      "type": "richtext"
     }
   }
 }

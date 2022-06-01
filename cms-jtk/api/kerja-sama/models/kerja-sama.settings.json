@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "kerja_samas",
   "info": {
-    "name": "KerjaSama"
+    "name": "KerjaSamaNasional",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "TeksKerjasamaInternasional": {
-      "type": "text"
+    "NamaPihak": {
+      "type": "string"
     },
-    "TeksKerjasamaNasional": {
-      "type": "text"
+    "TeksKerjaSama": {
+      "type": "richtext"
     },
-    "LogoKerjaSama": {
-      "collection": "file",
+    "LogoPihak": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_proyek_daftar_proyeks",
+  "info": {
+    "name": "DaftarProyek",
+    "icon": "wrench"
+  },
+  "options": {},
+  "attributes": {
+    "Judul": {
+      "type": "string"
+    },
+    "Topik": {
+      "type": "string"
+    },
+    "Versi": {
+      "type": "string"
+    },
+    "Tahun": {
+      "type": "integer"
+    },
+    "Role": {
+      "type": "string"
+    }
+  }
+}

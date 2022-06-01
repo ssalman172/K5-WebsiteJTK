@@ -42,23 +42,14 @@
     "MataKuliahyangDiampu": {
       "type": "string"
     },
-    "PengalamanProyekProduk": {
-      "type": "text"
-    },
     "PengalamanKegiatanPenelitian": {
       "type": "string"
     },
     "Prestasi": {
       "type": "string"
     },
-    "DaftarPublikasiIlmiah": {
-      "type": "text"
-    },
     "PendidikanTerakhir": {
       "type": "string"
-    },
-    "Education": {
-      "type": "text"
     },
     "Foto": {
       "model": "file",
@@ -71,6 +62,21 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "DaftarPendidikan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pendidikan.daftar-pendidikan"
+    },
+    "DaftarPublikasi": {
+      "type": "component",
+      "repeatable": true,
+      "component": "publikasi.daftar-publikasi"
+    },
+    "DaftarProyek": {
+      "type": "component",
+      "repeatable": true,
+      "component": "proyek.daftar-proyek"
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_publikasi_daftar_publikasis",
+  "info": {
+    "name": "DaftarPublikasi",
+    "icon": "file-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Judul": {
+      "type": "string"
+    },
+    "Tahun": {
+      "type": "integer"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "Jurnal": {
+      "type": "string"
+    },
+    "DOI": {
+      "type": "string"
+    }
+  }
+}

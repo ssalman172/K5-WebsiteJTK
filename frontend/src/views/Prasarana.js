@@ -30,7 +30,7 @@ const Prasarana = () => {
               Sarana
             </span>
           </Link>
-          <p className="color-navyblue underline font-bold ml-3">Prasarana</p>
+          <p className="color-navyblue underline font-bold ml3">Prasarana</p>
         </div>
         {
           data.map((elem) => {
