@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Banner from "../components/Banner";
+import Loading from "../components/Loading";
 
 const images = [
   "/img/kerja-sama/MIT_logo.png",
@@ -29,6 +30,10 @@ const DaftarPrestasi = () => {
     "color-navyblue font-normal opacity-50 hover:underline hover:opacity-100 hover:cursor-pointer";
   const sub_url = useParams().sub_url;
   const paginationContainerRef = useRef();
+
+  useEffect(() => {
+    setCurrentItems(images);
+  });
 
   return (
     <div>
